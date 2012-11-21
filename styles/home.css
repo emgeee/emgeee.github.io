@@ -1,0 +1,43 @@
+html{
+  height:100%;
+  width:100%;
+}
+
+body{
+  font-family:"Helvetica";
+  height:100%;
+  width:680px;
+}
+
+#container{
+  min-height:90%;
+
+  margin: auto;
+
+  border: 1px green solid;
+}
+
+#name{
+  font-size: 24px;
+
+}
+
+#about{
+}
+
+#contact{
+
+}
+
+#contact a{
+  color: green;
+  font-size: 20px;
+}
+
+#footer{
+  margin: 0px auto 0 auto;
+  font-size: 12px;
+
+  border: 1px red solid;
+
+}
