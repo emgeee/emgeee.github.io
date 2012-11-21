@@ -1,16 +1,26 @@
 html{
   height:100%;
   width:100%;
+
+  padding: 5px 50px;
+
+  background: url('../images/bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 }
 
 body{
   font-family:"Helvetica";
-  height:100%;
+  height:95%;
   width:680px;
+
 }
 
 #container{
-  min-height:90%;
+  min-height:100%;
 
   margin: auto;
 
@@ -18,14 +28,40 @@ body{
 }
 
 #name{
-  font-size: 24px;
+  font-size: 30px;
+  background: rgba(255,255,255,.7);
+
+  border-radius: 10px;
+  /* top/bottom left/right */
+  padding: 1px 10px;  
+
+
 
 }
 
 #about{
+  background: rgba(255,255,255,.7);
+
+  border-radius: 10px;
+  /* top/bottom left/right */
+  padding: 1px 10px;  
+
+
+}
+
+#about em{
+  font-size: 18px;
+  color: green;
 }
 
 #contact{
+  margin-top: 50px;
+  border: 1px blue solid;
+
+  background: rgba(255,255,255,.7);
+  border-radius: 10px;
+  /* top/bottom left/right */
+  padding: 1px 10px;  
 
 }
 
@@ -35,9 +71,14 @@ body{
 }
 
 #footer{
-  margin: 0px auto 0 auto;
+  text-align: center;
+  height: 30px;
+  margin: -30px auto 0 auto;
   font-size: 12px;
 
-  border: 1px red solid;
+  background: rgba(255,255,255,.7);
+  border-radius: 10px;
+  /* top/bottom left/right */
+  padding: 1px 10px;  
 
 }
