@@ -48,7 +48,7 @@ body {
 	padding-left: 0px;
 	overflow: hidden;
 
-	-webkit-animation-duration: 2s;
+	-webkit-animation-duration: 2.5s;
 	-webkit-animation-name: slidedown;
 	-webkit-animation-timing-function: linear;
 }
@@ -71,14 +71,16 @@ body {
 }
 
 .contacts li:nth-child(1){
-	-webkit-animation-duration: 2s;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in;
 	-webkit-animation-name: rotate;
 	-webkit-animation-fill-mode: forwards;
 }
 
 .contacts li:nth-child(2){
-	-webkit-animation-duration: 2s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-delay: .5s;
+	-webkit-animation-timing-function: ease-in;
 	-webkit-animation-name: rotate;
 	-webkit-animation-fill-mode: forwards;
 
@@ -86,8 +88,9 @@ body {
 }
 
 .contacts li:nth-child(3){
-	-webkit-animation-duration: 2s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-delay: 1s;
+	-webkit-animation-timing-function: ease-in;
 	-webkit-animation-name: rotate;
 	-webkit-animation-fill-mode: forwards;
 
@@ -95,8 +98,9 @@ body {
 }
 
 .contacts li:nth-child(4){
-	-webkit-animation-duration: 2s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-delay: 1.5s;
+	-webkit-animation-timing-function: ease-in;
 	-webkit-animation-name: rotate;
 	-webkit-animation-fill-mode: forwards;
 
@@ -126,12 +130,44 @@ body {
 	height: inherit;
 	display: inline-block;
 	vertical-align: top;
+}
+
+.icon i{
+	font-size:36px;
+}
+.icon .fa-envelope{
+	font-size:30px;
+}
+
+.icon a:visited {
 	color: #4775FF;
 }
 
-.icon :visited{
+.icon a:link{
 	color: #4775FF;
 }
+
+.icon :hover{
+	width: 49px;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-name: border;
+
+}
+
+
+@-webkit-keyframes border {
+	from {
+		color: #4775FF;
+	}
+
+	to {
+		color: green;
+	}
+}
+
 
 .line {
 	width: 0px;
