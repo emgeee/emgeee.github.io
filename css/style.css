@@ -8,14 +8,14 @@ body {
 /*	font-family: 'Noto Sans', sans-serif;
 */	color: white;
 	font-weight:400 !important;	
-	margin-top:20%;
+	margin-top:15%;
 
 }
 
 /* Large desktop */
 @media (min-width: 1200px) {
 	#name {
-		margin-top:20%;
+		margin-top:15%;
 	}
 }
  
@@ -41,17 +41,78 @@ body {
 }
 
 .contacts {
+	display: block;
 	list-style: none;
 	width: 101px;
 	margin: 0px auto;
 	padding-left: 0px;
+	overflow: hidden;
 
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: slidedown;
+	-webkit-timing-function: linear;
 }
+
+@-webkit-keyframes slidedown{
+	from {
+		height: 0px;
+	}
+
+	to {
+		height: 160px;
+	}
+}
+
+
 
 .contacts li {
 	height: 40px;
 	width: inherit;
 }
+
+.contacts li:nth-child(1){
+	-webkit-animation-duration: 2s;
+	-webkit-animation-name: rotate;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.contacts li:nth-child(2){
+	-webkit-animation-duration: 2s;
+	-webkit-animation-delay: .5s;
+	-webkit-animation-name: rotate;
+	-webkit-animation-fill-mode: forwards;
+
+	-webkit-transform: rotateY(90deg);
+}
+
+.contacts li:nth-child(3){
+	-webkit-animation-duration: 2s;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-name: rotate;
+	-webkit-animation-fill-mode: forwards;
+
+	-webkit-transform: rotateY(90deg);
+}
+
+.contacts li:nth-child(4){
+	-webkit-animation-duration: 2s;
+	-webkit-animation-delay: 1.5s;
+	-webkit-animation-name: rotate;
+	-webkit-animation-fill-mode: forwards;
+
+	-webkit-transform: rotateY(90deg);
+}
+
+@-webkit-keyframes rotate{
+	from {
+		-webkit-transform: rotateY(90deg);
+	}
+
+	to {
+		-webkit-transform: rotateY(0deg);
+	}
+}
+
 
 .blank {
 	width: 46px;
@@ -65,7 +126,7 @@ body {
 	height: inherit;
 	display: inline-block;
 	vertical-align: top;
-	color:#4775FF;
+	color: #4775FF;
 }
 
 
