@@ -65,12 +65,12 @@ body {
 	height: inherit;
 	display: inline-block;
 	vertical-align: top;
-	color:blue;
+	color:#4775FF;
 }
 
 
 .icon a:visited{
-	color: blue;
+	color: #4775FF;
 }
 
 .line {
