@@ -44,12 +44,13 @@ body {
 	list-style: none;
 	width: 101px;
 	margin: 0px auto;
+	padding-left: 0px;
+
 }
 
 .contacts li {
 	height: 40px;
 	width: inherit;
-
 }
 
 .blank {
@@ -64,6 +65,12 @@ body {
 	height: inherit;
 	display: inline-block;
 	vertical-align: top;
+	color:blue;
+}
+
+
+.icon a:visited{
+	color: blue;
 }
 
 .line {
