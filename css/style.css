@@ -48,9 +48,9 @@ body {
 	padding-left: 0px;
 	overflow: hidden;
 
-	-webkit-animation-duration: 1.5s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-name: slidedown;
-	-webkit-timing-function: linear;
+	-webkit-animation-timing-function: linear;
 }
 
 @-webkit-keyframes slidedown{
@@ -129,8 +129,7 @@ body {
 	color: #4775FF;
 }
 
-
-.icon a:visited{
+.icon :visited{
 	color: #4775FF;
 }
 
