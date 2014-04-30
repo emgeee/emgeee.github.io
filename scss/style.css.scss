@@ -1,161 +1,180 @@
 @import "compass";
 
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
 body {
-	background-color: black;
-	text-align:center;
-	padding:0 !important;
+  background-color: black;
+  text-align:center;
+  padding:0 !important;
 }
 
 .container{
-	margin: 0 auto;
-	margin-top:15%;
+  margin: 0 auto;
+  margin-top:15%;
 
 }
 
 #name {
-	color: white;
-	font-weight:400 !important;	
+  color: white;
+  font-weight:400 !important; 
 }
 
 .contacts {
-	display: block;
-	list-style: none;
-	width: 101px;
-	margin: 0px auto;
-	padding-left: 0px;
-	overflow: hidden;
+  display: block;
+  list-style: none;
+  width: 101px;
+  margin: 0px auto;
+  padding-left: 0px;
+  overflow: hidden;
 
-	-webkit-animation-duration: 2.5s;
-	-webkit-animation-name: slidedown;
-	-webkit-animation-timing-function: linear;
+  @include vendor-prefix(animation-duration, 2.5s);
+  @include vendor-prefix(animation-name, slidedown);
+  @include vendor-prefix(animation-timing-function, linear);
 }
 
-@-webkit-keyframes slidedown{
-	from {
-		height: 0px;
-	}
+@include keyframes(slidedown){
+  from {
+    height: 0px;
+  }
 
-	to {
-		height: 160px;
-	}
+  to {
+    height: 160px;
+  }
 }
 
+
+
+@mixin icon-flip($delay){
+  @include vendor-prefix(animation-duration, 1s);
+  @include vendor-prefix(animation-delay, $delay);
+  @include vendor-prefix(animation-timing-function, ease-in);
+  @include vendor-prefix(animation-name, rotate);
+  @include vendor-prefix(animation-fill-mode, forwards);
+
+  @include vendor-prefix(transform, rotateY(90deg));
+}
 
 .contacts li {
-	height: 40px;
-	width: inherit;
+  height: 40px;
+  width: inherit;
 }
 
 .contacts li:nth-child(1){
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-name: rotate;
-	-webkit-animation-fill-mode: forwards;
+  @include icon-flip(0s)
 }
 
 .contacts li:nth-child(2){
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: .5s;
-	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-name: rotate;
-	-webkit-animation-fill-mode: forwards;
-
-	-webkit-transform: rotateY(90deg);
+  @include icon-flip(.5s)
 }
 
 .contacts li:nth-child(3){
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 1s;
-	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-name: rotate;
-	-webkit-animation-fill-mode: forwards;
-
-	-webkit-transform: rotateY(90deg);
+  @include icon-flip(1s)
 }
 
 .contacts li:nth-child(4){
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 1.5s;
-	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-name: rotate;
-	-webkit-animation-fill-mode: forwards;
-
-	-webkit-transform: rotateY(90deg);
+  @include icon-flip(1.5s)
 }
 
-@-webkit-keyframes rotate{
-	from {
-		-webkit-transform: rotateY(90deg);
-	}
 
-	to {
-		-webkit-transform: rotateY(0deg);
-	}
+@include keyframes(rotate){
+  from {
+    @include vendor-prefix(transform, rotateY(90deg));
+  }
+
+  to {
+    @include vendor-prefix(transform, rotateY(0deg));
+  }
 }
 
 
 .blank {
-	width: 46px;
-	height: inherit;
-	display: inline-block;
-	vertical-align: top;
+  width: 46px;
+  height: inherit;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .icon {
-	width: 46px;
-	height: inherit;
-	display: inline-block;
-	vertical-align: top;
+  width: 46px;
+  height: inherit;
+  display: inline-block;
+  vertical-align: top;
 
 
-	.fa{
-		font-size:36px;
-	}
-	
-	.fa-envelope{
-		font-size:30px;
-	}
+  .fa{
+    font-size:36px;
+  }
+  
+  .fa-envelope{
+    font-size:30px;
+  }
 
-	a:visited {
-		color: #4775FF;
-	}
+  a:visited {
+    color: #4775FF;
+  }
 
-	a:link{
-		color: #4775FF;
-	}
+  a:link{
+    color: #4775FF;
+  }
 
-	a:hover{
-		width: 49px;
+  a:hover{
+    width: 49px;
 
-		-webkit-animation-duration: 1s;
-		-webkit-animation-direction: alternate;
-		-webkit-animation-iteration-count: infinite;
-		-webkit-animation-timing-function: linear;
-		-webkit-animation-name: border;
-	}
+    @include vendor-prefix(animation-duration, 1s);
+    @include vendor-prefix(animation-direction, alternate);
+    @include vendor-prefix(animation-iteration-count, infinite);
+    @include vendor-prefix(animation-timing-function, linear);
+    @include vendor-prefix(animation-name, border);
+  }
 }
 
 
-@-webkit-keyframes border {
-	from {
-		color: #4775FF;
-	}
+@include keyframes(border){
+  from {
+    color: #4775FF;
+  }
 
-	to {
-		color: red;
-	}
+  to {
+    color: green;
+  }
 }
 
 
 .line {
-	width: 0px;
-	height: inherit;
-	display: inline-block;
-	vertical-align: top;
+  width: 0px;
+  height: inherit;
+  display: inline-block;
+  vertical-align: top;
 
-	border-left: 1px;
-	border-left-style: solid;
-	border-left-color: white;
+  border-left: 1px;
+  border-left-style: solid;
+  border-left-color: white;
 }
 
 

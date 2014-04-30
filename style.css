@@ -1,23 +1,23 @@
-/* line 3, scss/style.css.scss */
+/* line 31, scss/style.css.scss */
 body {
   background-color: black;
   text-align: center;
   padding: 0 !important;
 }
 
-/* line 9, scss/style.css.scss */
+/* line 37, scss/style.css.scss */
 .container {
   margin: 0 auto;
   margin-top: 15%;
 }
 
-/* line 15, scss/style.css.scss */
+/* line 43, scss/style.css.scss */
 #name {
   color: white;
   font-weight: 400 !important;
 }
 
-/* line 20, scss/style.css.scss */
+/* line 48, scss/style.css.scss */
 .contacts {
   display: block;
   list-style: none;
@@ -26,79 +26,325 @@ body {
   padding-left: 0px;
   overflow: hidden;
   -webkit-animation-duration: 2.5s;
+  -moz-animation-duration: 2.5s;
+  -ms-animation-duration: 2.5s;
+  -o-animation-duration: 2.5s;
+  animation-duration: 2.5s;
   -webkit-animation-name: slidedown;
+  -moz-animation-name: slidedown;
+  -ms-animation-name: slidedown;
+  -o-animation-name: slidedown;
+  animation-name: slidedown;
   -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 @-webkit-keyframes slidedown {
-  /* line 34, scss/style.css.scss */
+  /* line 62, scss/style.css.scss */
   from {
     height: 0px;
   }
 
-  /* line 38, scss/style.css.scss */
+  /* line 66, scss/style.css.scss */
   to {
     height: 160px;
   }
 }
 
-/* line 44, scss/style.css.scss */
+@-moz-keyframes slidedown {
+  /* line 62, scss/style.css.scss */
+  from {
+    height: 0px;
+  }
+
+  /* line 66, scss/style.css.scss */
+  to {
+    height: 160px;
+  }
+}
+
+@-ms-keyframes slidedown {
+  /* line 62, scss/style.css.scss */
+  from {
+    height: 0px;
+  }
+
+  /* line 66, scss/style.css.scss */
+  to {
+    height: 160px;
+  }
+}
+
+@-o-keyframes slidedown {
+  /* line 62, scss/style.css.scss */
+  from {
+    height: 0px;
+  }
+
+  /* line 66, scss/style.css.scss */
+  to {
+    height: 160px;
+  }
+}
+
+@keyframes slidedown {
+  /* line 62, scss/style.css.scss */
+  from {
+    height: 0px;
+  }
+
+  /* line 66, scss/style.css.scss */
+  to {
+    height: 160px;
+  }
+}
+
+/* line 83, scss/style.css.scss */
 .contacts li {
   height: 40px;
   width: inherit;
 }
 
-/* line 49, scss/style.css.scss */
+/* line 88, scss/style.css.scss */
 .contacts li:nth-child(1) {
   -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
   -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
   -webkit-animation-name: rotate;
+  -moz-animation-name: rotate;
+  -ms-animation-name: rotate;
+  -o-animation-name: rotate;
+  animation-name: rotate;
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  transform: rotateY(90deg);
 }
 
-/* line 56, scss/style.css.scss */
+/* line 92, scss/style.css.scss */
 .contacts li:nth-child(2) {
   -webkit-animation-duration: 1s;
-  -webkit-animation-delay: .5s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -ms-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+  animation-delay: 0.5s;
   -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
   -webkit-animation-name: rotate;
+  -moz-animation-name: rotate;
+  -ms-animation-name: rotate;
+  -o-animation-name: rotate;
+  animation-name: rotate;
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  transform: rotateY(90deg);
 }
 
-/* line 66, scss/style.css.scss */
+/* line 96, scss/style.css.scss */
 .contacts li:nth-child(3) {
   -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
   -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
   -webkit-animation-name: rotate;
+  -moz-animation-name: rotate;
+  -ms-animation-name: rotate;
+  -o-animation-name: rotate;
+  animation-name: rotate;
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  transform: rotateY(90deg);
 }
 
-/* line 76, scss/style.css.scss */
+/* line 100, scss/style.css.scss */
 .contacts li:nth-child(4) {
   -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -ms-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  animation-delay: 1.5s;
   -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
   -webkit-animation-name: rotate;
+  -moz-animation-name: rotate;
+  -ms-animation-name: rotate;
+  -o-animation-name: rotate;
+  animation-name: rotate;
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  transform: rotateY(90deg);
 }
 
 @-webkit-keyframes rotate {
-  /* line 87, scss/style.css.scss */
+  /* line 106, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
   }
 
-  /* line 91, scss/style.css.scss */
+  /* line 110, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
 }
 
-/* line 97, scss/style.css.scss */
+@-moz-keyframes rotate {
+  /* line 106, scss/style.css.scss */
+  from {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+
+  /* line 110, scss/style.css.scss */
+  to {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+@-ms-keyframes rotate {
+  /* line 106, scss/style.css.scss */
+  from {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+
+  /* line 110, scss/style.css.scss */
+  to {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+@-o-keyframes rotate {
+  /* line 106, scss/style.css.scss */
+  from {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+
+  /* line 110, scss/style.css.scss */
+  to {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes rotate {
+  /* line 106, scss/style.css.scss */
+  from {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+
+  /* line 110, scss/style.css.scss */
+  to {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+/* line 116, scss/style.css.scss */
 .blank {
   width: 46px;
   height: inherit;
@@ -106,52 +352,120 @@ body {
   vertical-align: top;
 }
 
-/* line 104, scss/style.css.scss */
+/* line 123, scss/style.css.scss */
 .icon {
   width: 46px;
   height: inherit;
   display: inline-block;
   vertical-align: top;
 }
-/* line 111, scss/style.css.scss */
+/* line 130, scss/style.css.scss */
 .icon .fa {
   font-size: 36px;
 }
-/* line 115, scss/style.css.scss */
+/* line 134, scss/style.css.scss */
 .icon .fa-envelope {
   font-size: 30px;
 }
-/* line 119, scss/style.css.scss */
+/* line 138, scss/style.css.scss */
 .icon a:visited {
   color: #4775FF;
 }
-/* line 123, scss/style.css.scss */
+/* line 142, scss/style.css.scss */
 .icon a:link {
   color: #4775FF;
 }
-/* line 127, scss/style.css.scss */
+/* line 146, scss/style.css.scss */
 .icon a:hover {
   width: 49px;
   -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -ms-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
   -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
   -webkit-animation-name: border;
+  -moz-animation-name: border;
+  -ms-animation-name: border;
+  -o-animation-name: border;
+  animation-name: border;
 }
 
 @-webkit-keyframes border {
-  /* line 140, scss/style.css.scss */
+  /* line 159, scss/style.css.scss */
   from {
     color: #4775FF;
   }
 
-  /* line 144, scss/style.css.scss */
+  /* line 163, scss/style.css.scss */
   to {
-    color: red;
+    color: green;
   }
 }
 
-/* line 150, scss/style.css.scss */
+@-moz-keyframes border {
+  /* line 159, scss/style.css.scss */
+  from {
+    color: #4775FF;
+  }
+
+  /* line 163, scss/style.css.scss */
+  to {
+    color: green;
+  }
+}
+
+@-ms-keyframes border {
+  /* line 159, scss/style.css.scss */
+  from {
+    color: #4775FF;
+  }
+
+  /* line 163, scss/style.css.scss */
+  to {
+    color: green;
+  }
+}
+
+@-o-keyframes border {
+  /* line 159, scss/style.css.scss */
+  from {
+    color: #4775FF;
+  }
+
+  /* line 163, scss/style.css.scss */
+  to {
+    color: green;
+  }
+}
+
+@keyframes border {
+  /* line 159, scss/style.css.scss */
+  from {
+    color: #4775FF;
+  }
+
+  /* line 163, scss/style.css.scss */
+  to {
+    color: green;
+  }
+}
+
+/* line 169, scss/style.css.scss */
 .line {
   width: 0px;
   height: inherit;
