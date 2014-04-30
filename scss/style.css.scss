@@ -5,40 +5,38 @@ body {
 }
 
 #name {
-/*	font-family: 'Noto Sans', sans-serif;
-*/	color: white;
+	color: white;
 	font-weight:400 !important;	
 	margin-top:15%;
-
 }
 
-/* Large desktop */
-@media (min-width: 1200px) {
-	#name {
-		margin-top:15%;
-	}
-}
+// /* Large desktop */
+// @media (min-width: 1200px) {
+// 	#name {
+// 		margin-top:15%;
+// 	}
+// }
  
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-	#name {
-		margin-top:30%;
-	}
-}
+// /* Portrait tablet to landscape and desktop */
+// @media (min-width: 768px) and (max-width: 979px) {
+// 	#name {
+// 		margin-top:30%;
+// 	}
+// }
+
+// /* Landscape phone to portrait tablet */
+// @media (max-width: 767px) {
+// 	#name {
+// 		margin-top:30%;
+// 	}
+// }
  
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-	#name {
-		margin-top:30%;
-	}
-}
- 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-	#name {
-		margin-top:30%;
-	}
-}
+// /* Landscape phones and down */
+// @media (max-width: 480px) {
+// 	#name {
+// 		margin-top:30%;
+// 	}
+// }
 
 .contacts {
 	display: block;
@@ -164,7 +162,7 @@ body {
 	}
 
 	to {
-		color: green;
+		color: red;
 	}
 }
 
