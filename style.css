@@ -1,27 +1,246 @@
-/* line 21, scss/style.css.scss */
+@-webkit-keyframes slidedown {
+  /* line 32, scss/style.css.scss */
+  from {
+    height: 0px;
+  }
+
+  /* line 36, scss/style.css.scss */
+  to {
+    height: 160px;
+  }
+}
+
+@-moz-keyframes slidedown {
+  /* line 32, scss/style.css.scss */
+  from {
+    height: 0px;
+  }
+
+  /* line 36, scss/style.css.scss */
+  to {
+    height: 160px;
+  }
+}
+
+@-ms-keyframes slidedown {
+  /* line 32, scss/style.css.scss */
+  from {
+    height: 0px;
+  }
+
+  /* line 36, scss/style.css.scss */
+  to {
+    height: 160px;
+  }
+}
+
+@-o-keyframes slidedown {
+  /* line 32, scss/style.css.scss */
+  from {
+    height: 0px;
+  }
+
+  /* line 36, scss/style.css.scss */
+  to {
+    height: 160px;
+  }
+}
+
+@keyframes slidedown {
+  /* line 32, scss/style.css.scss */
+  from {
+    height: 0px;
+  }
+
+  /* line 36, scss/style.css.scss */
+  to {
+    height: 160px;
+  }
+}
+
+@-webkit-keyframes rotate {
+  /* line 42, scss/style.css.scss */
+  from {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+
+  /* line 46, scss/style.css.scss */
+  to {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+@-moz-keyframes rotate {
+  /* line 42, scss/style.css.scss */
+  from {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+
+  /* line 46, scss/style.css.scss */
+  to {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+@-ms-keyframes rotate {
+  /* line 42, scss/style.css.scss */
+  from {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+
+  /* line 46, scss/style.css.scss */
+  to {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+@-o-keyframes rotate {
+  /* line 42, scss/style.css.scss */
+  from {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+
+  /* line 46, scss/style.css.scss */
+  to {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes rotate {
+  /* line 42, scss/style.css.scss */
+  from {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+
+  /* line 46, scss/style.css.scss */
+  to {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+@-webkit-keyframes border {
+  /* line 53, scss/style.css.scss */
+  from {
+    color: #4775FF;
+  }
+
+  /* line 57, scss/style.css.scss */
+  to {
+    color: green;
+  }
+}
+
+@-moz-keyframes border {
+  /* line 53, scss/style.css.scss */
+  from {
+    color: #4775FF;
+  }
+
+  /* line 57, scss/style.css.scss */
+  to {
+    color: green;
+  }
+}
+
+@-ms-keyframes border {
+  /* line 53, scss/style.css.scss */
+  from {
+    color: #4775FF;
+  }
+
+  /* line 57, scss/style.css.scss */
+  to {
+    color: green;
+  }
+}
+
+@-o-keyframes border {
+  /* line 53, scss/style.css.scss */
+  from {
+    color: #4775FF;
+  }
+
+  /* line 57, scss/style.css.scss */
+  to {
+    color: green;
+  }
+}
+
+@keyframes border {
+  /* line 53, scss/style.css.scss */
+  from {
+    color: #4775FF;
+  }
+
+  /* line 57, scss/style.css.scss */
+  to {
+    color: green;
+  }
+}
+
+/* line 63, scss/style.css.scss */
 body {
   background-color: black;
   text-align: center;
   padding: 0 !important;
 }
 
-/* line 27, scss/style.css.scss */
+/* line 69, scss/style.css.scss */
 .container {
   margin: 0 auto;
   margin-top: 15%;
 }
 
-/* line 33, scss/style.css.scss */
+/* line 74, scss/style.css.scss */
 #name {
   color: white;
   font-weight: 400 !important;
 }
 
-/* line 38, scss/style.css.scss */
+/* line 79, scss/style.css.scss */
 .contacts {
   display: block;
   list-style: none;
-  width: 101px;
   margin: 0px auto;
   padding-left: 0px;
   overflow: hidden;
@@ -41,74 +260,16 @@ body {
   -o-animation-timing-function: linear;
   animation-timing-function: linear;
 }
-
-@-webkit-keyframes slidedown {
-  /* line 52, scss/style.css.scss */
-  from {
-    height: 0px;
-  }
-
-  /* line 56, scss/style.css.scss */
-  to {
-    height: 160px;
-  }
+/* line 86, scss/style.css.scss */
+.contacts div {
+  display: inline-block;
 }
-
-@-moz-keyframes slidedown {
-  /* line 52, scss/style.css.scss */
-  from {
-    height: 0px;
-  }
-
-  /* line 56, scss/style.css.scss */
-  to {
-    height: 160px;
-  }
-}
-
-@-ms-keyframes slidedown {
-  /* line 52, scss/style.css.scss */
-  from {
-    height: 0px;
-  }
-
-  /* line 56, scss/style.css.scss */
-  to {
-    height: 160px;
-  }
-}
-
-@-o-keyframes slidedown {
-  /* line 52, scss/style.css.scss */
-  from {
-    height: 0px;
-  }
-
-  /* line 56, scss/style.css.scss */
-  to {
-    height: 160px;
-  }
-}
-
-@keyframes slidedown {
-  /* line 52, scss/style.css.scss */
-  from {
-    height: 0px;
-  }
-
-  /* line 56, scss/style.css.scss */
-  to {
-    height: 160px;
-  }
-}
-
-/* line 73, scss/style.css.scss */
+/* line 94, scss/style.css.scss */
 .contacts li {
   height: 40px;
   width: inherit;
 }
-
-/* line 78, scss/style.css.scss */
+/* line 99, scss/style.css.scss */
 .contacts li:nth-child(1) {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
@@ -141,8 +302,7 @@ body {
   -o-transform: rotateY(90deg);
   transform: rotateY(90deg);
 }
-
-/* line 82, scss/style.css.scss */
+/* line 103, scss/style.css.scss */
 .contacts li:nth-child(2) {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
@@ -175,8 +335,7 @@ body {
   -o-transform: rotateY(90deg);
   transform: rotateY(90deg);
 }
-
-/* line 86, scss/style.css.scss */
+/* line 107, scss/style.css.scss */
 .contacts li:nth-child(3) {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
@@ -209,8 +368,7 @@ body {
   -o-transform: rotateY(90deg);
   transform: rotateY(90deg);
 }
-
-/* line 90, scss/style.css.scss */
+/* line 111, scss/style.css.scss */
 .contacts li:nth-child(4) {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
@@ -244,107 +402,7 @@ body {
   transform: rotateY(90deg);
 }
 
-@-webkit-keyframes rotate {
-  /* line 96, scss/style.css.scss */
-  from {
-    -webkit-transform: rotateY(90deg);
-    -moz-transform: rotateY(90deg);
-    -ms-transform: rotateY(90deg);
-    -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
-
-  /* line 100, scss/style.css.scss */
-  to {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-}
-
-@-moz-keyframes rotate {
-  /* line 96, scss/style.css.scss */
-  from {
-    -webkit-transform: rotateY(90deg);
-    -moz-transform: rotateY(90deg);
-    -ms-transform: rotateY(90deg);
-    -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
-
-  /* line 100, scss/style.css.scss */
-  to {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-}
-
-@-ms-keyframes rotate {
-  /* line 96, scss/style.css.scss */
-  from {
-    -webkit-transform: rotateY(90deg);
-    -moz-transform: rotateY(90deg);
-    -ms-transform: rotateY(90deg);
-    -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
-
-  /* line 100, scss/style.css.scss */
-  to {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-}
-
-@-o-keyframes rotate {
-  /* line 96, scss/style.css.scss */
-  from {
-    -webkit-transform: rotateY(90deg);
-    -moz-transform: rotateY(90deg);
-    -ms-transform: rotateY(90deg);
-    -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
-
-  /* line 100, scss/style.css.scss */
-  to {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-}
-
-@keyframes rotate {
-  /* line 96, scss/style.css.scss */
-  from {
-    -webkit-transform: rotateY(90deg);
-    -moz-transform: rotateY(90deg);
-    -ms-transform: rotateY(90deg);
-    -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
-
-  /* line 100, scss/style.css.scss */
-  to {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-}
-
-/* line 106, scss/style.css.scss */
+/* line 119, scss/style.css.scss */
 .blank {
   width: 46px;
   height: inherit;
@@ -352,30 +410,41 @@ body {
   vertical-align: top;
 }
 
-/* line 113, scss/style.css.scss */
+/* line 126, scss/style.css.scss */
+.line {
+  width: 0px;
+  height: inherit;
+  display: inline-block;
+  vertical-align: top;
+  border-left: 1px;
+  border-left-style: solid;
+  border-left-color: white;
+}
+
+/* line 137, scss/style.css.scss */
 .icon {
   width: 46px;
   height: inherit;
   display: inline-block;
   vertical-align: top;
 }
-/* line 120, scss/style.css.scss */
+/* line 144, scss/style.css.scss */
 .icon .fa {
   font-size: 36px;
 }
-/* line 124, scss/style.css.scss */
+/* line 148, scss/style.css.scss */
 .icon .fa-envelope {
   font-size: 30px;
 }
-/* line 128, scss/style.css.scss */
+/* line 152, scss/style.css.scss */
 .icon a:visited {
   color: #4775FF;
 }
-/* line 132, scss/style.css.scss */
+/* line 156, scss/style.css.scss */
 .icon a:link {
   color: #4775FF;
 }
-/* line 136, scss/style.css.scss */
+/* line 160, scss/style.css.scss */
 .icon a:hover {
   width: 49px;
   -webkit-animation-duration: 1s;
@@ -403,75 +472,4 @@ body {
   -ms-animation-name: border;
   -o-animation-name: border;
   animation-name: border;
-}
-
-@-webkit-keyframes border {
-  /* line 149, scss/style.css.scss */
-  from {
-    color: #4775FF;
-  }
-
-  /* line 153, scss/style.css.scss */
-  to {
-    color: green;
-  }
-}
-
-@-moz-keyframes border {
-  /* line 149, scss/style.css.scss */
-  from {
-    color: #4775FF;
-  }
-
-  /* line 153, scss/style.css.scss */
-  to {
-    color: green;
-  }
-}
-
-@-ms-keyframes border {
-  /* line 149, scss/style.css.scss */
-  from {
-    color: #4775FF;
-  }
-
-  /* line 153, scss/style.css.scss */
-  to {
-    color: green;
-  }
-}
-
-@-o-keyframes border {
-  /* line 149, scss/style.css.scss */
-  from {
-    color: #4775FF;
-  }
-
-  /* line 153, scss/style.css.scss */
-  to {
-    color: green;
-  }
-}
-
-@keyframes border {
-  /* line 149, scss/style.css.scss */
-  from {
-    color: #4775FF;
-  }
-
-  /* line 153, scss/style.css.scss */
-  to {
-    color: green;
-  }
-}
-
-/* line 159, scss/style.css.scss */
-.line {
-  width: 0px;
-  height: inherit;
-  display: inline-block;
-  vertical-align: top;
-  border-left: 1px;
-  border-left-style: solid;
-  border-left-color: white;
 }
