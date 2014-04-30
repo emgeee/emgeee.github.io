@@ -1,23 +1,23 @@
-/* line 31, scss/style.css.scss */
+/* line 21, scss/style.css.scss */
 body {
   background-color: black;
   text-align: center;
   padding: 0 !important;
 }
 
-/* line 37, scss/style.css.scss */
+/* line 27, scss/style.css.scss */
 .container {
   margin: 0 auto;
   margin-top: 15%;
 }
 
-/* line 43, scss/style.css.scss */
+/* line 33, scss/style.css.scss */
 #name {
   color: white;
   font-weight: 400 !important;
 }
 
-/* line 48, scss/style.css.scss */
+/* line 38, scss/style.css.scss */
 .contacts {
   display: block;
   list-style: none;
@@ -43,72 +43,72 @@ body {
 }
 
 @-webkit-keyframes slidedown {
-  /* line 62, scss/style.css.scss */
+  /* line 52, scss/style.css.scss */
   from {
     height: 0px;
   }
 
-  /* line 66, scss/style.css.scss */
+  /* line 56, scss/style.css.scss */
   to {
     height: 160px;
   }
 }
 
 @-moz-keyframes slidedown {
-  /* line 62, scss/style.css.scss */
+  /* line 52, scss/style.css.scss */
   from {
     height: 0px;
   }
 
-  /* line 66, scss/style.css.scss */
+  /* line 56, scss/style.css.scss */
   to {
     height: 160px;
   }
 }
 
 @-ms-keyframes slidedown {
-  /* line 62, scss/style.css.scss */
+  /* line 52, scss/style.css.scss */
   from {
     height: 0px;
   }
 
-  /* line 66, scss/style.css.scss */
+  /* line 56, scss/style.css.scss */
   to {
     height: 160px;
   }
 }
 
 @-o-keyframes slidedown {
-  /* line 62, scss/style.css.scss */
+  /* line 52, scss/style.css.scss */
   from {
     height: 0px;
   }
 
-  /* line 66, scss/style.css.scss */
+  /* line 56, scss/style.css.scss */
   to {
     height: 160px;
   }
 }
 
 @keyframes slidedown {
-  /* line 62, scss/style.css.scss */
+  /* line 52, scss/style.css.scss */
   from {
     height: 0px;
   }
 
-  /* line 66, scss/style.css.scss */
+  /* line 56, scss/style.css.scss */
   to {
     height: 160px;
   }
 }
 
-/* line 83, scss/style.css.scss */
+/* line 73, scss/style.css.scss */
 .contacts li {
   height: 40px;
   width: inherit;
 }
 
-/* line 88, scss/style.css.scss */
+/* line 78, scss/style.css.scss */
 .contacts li:nth-child(1) {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
@@ -142,7 +142,7 @@ body {
   transform: rotateY(90deg);
 }
 
-/* line 92, scss/style.css.scss */
+/* line 82, scss/style.css.scss */
 .contacts li:nth-child(2) {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
@@ -176,7 +176,7 @@ body {
   transform: rotateY(90deg);
 }
 
-/* line 96, scss/style.css.scss */
+/* line 86, scss/style.css.scss */
 .contacts li:nth-child(3) {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
@@ -210,7 +210,7 @@ body {
   transform: rotateY(90deg);
 }
 
-/* line 100, scss/style.css.scss */
+/* line 90, scss/style.css.scss */
 .contacts li:nth-child(4) {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
@@ -245,7 +245,7 @@ body {
 }
 
 @-webkit-keyframes rotate {
-  /* line 106, scss/style.css.scss */
+  /* line 96, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
@@ -254,7 +254,7 @@ body {
     transform: rotateY(90deg);
   }
 
-  /* line 110, scss/style.css.scss */
+  /* line 100, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
@@ -265,7 +265,7 @@ body {
 }
 
 @-moz-keyframes rotate {
-  /* line 106, scss/style.css.scss */
+  /* line 96, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
@@ -274,7 +274,7 @@ body {
     transform: rotateY(90deg);
   }
 
-  /* line 110, scss/style.css.scss */
+  /* line 100, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
@@ -285,7 +285,7 @@ body {
 }
 
 @-ms-keyframes rotate {
-  /* line 106, scss/style.css.scss */
+  /* line 96, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
@@ -294,7 +294,7 @@ body {
     transform: rotateY(90deg);
   }
 
-  /* line 110, scss/style.css.scss */
+  /* line 100, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
@@ -305,7 +305,7 @@ body {
 }
 
 @-o-keyframes rotate {
-  /* line 106, scss/style.css.scss */
+  /* line 96, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
@@ -314,7 +314,7 @@ body {
     transform: rotateY(90deg);
   }
 
-  /* line 110, scss/style.css.scss */
+  /* line 100, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
@@ -325,7 +325,7 @@ body {
 }
 
 @keyframes rotate {
-  /* line 106, scss/style.css.scss */
+  /* line 96, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
@@ -334,7 +334,7 @@ body {
     transform: rotateY(90deg);
   }
 
-  /* line 110, scss/style.css.scss */
+  /* line 100, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
@@ -344,7 +344,7 @@ body {
   }
 }
 
-/* line 116, scss/style.css.scss */
+/* line 106, scss/style.css.scss */
 .blank {
   width: 46px;
   height: inherit;
@@ -352,30 +352,30 @@ body {
   vertical-align: top;
 }
 
-/* line 123, scss/style.css.scss */
+/* line 113, scss/style.css.scss */
 .icon {
   width: 46px;
   height: inherit;
   display: inline-block;
   vertical-align: top;
 }
-/* line 130, scss/style.css.scss */
+/* line 120, scss/style.css.scss */
 .icon .fa {
   font-size: 36px;
 }
-/* line 134, scss/style.css.scss */
+/* line 124, scss/style.css.scss */
 .icon .fa-envelope {
   font-size: 30px;
 }
-/* line 138, scss/style.css.scss */
+/* line 128, scss/style.css.scss */
 .icon a:visited {
   color: #4775FF;
 }
-/* line 142, scss/style.css.scss */
+/* line 132, scss/style.css.scss */
 .icon a:link {
   color: #4775FF;
 }
-/* line 146, scss/style.css.scss */
+/* line 136, scss/style.css.scss */
 .icon a:hover {
   width: 49px;
   -webkit-animation-duration: 1s;
@@ -406,66 +406,66 @@ body {
 }
 
 @-webkit-keyframes border {
-  /* line 159, scss/style.css.scss */
+  /* line 149, scss/style.css.scss */
   from {
     color: #4775FF;
   }
 
-  /* line 163, scss/style.css.scss */
+  /* line 153, scss/style.css.scss */
   to {
     color: green;
   }
 }
 
 @-moz-keyframes border {
-  /* line 159, scss/style.css.scss */
+  /* line 149, scss/style.css.scss */
   from {
     color: #4775FF;
   }
 
-  /* line 163, scss/style.css.scss */
+  /* line 153, scss/style.css.scss */
   to {
     color: green;
   }
 }
 
 @-ms-keyframes border {
-  /* line 159, scss/style.css.scss */
+  /* line 149, scss/style.css.scss */
   from {
     color: #4775FF;
   }
 
-  /* line 163, scss/style.css.scss */
+  /* line 153, scss/style.css.scss */
   to {
     color: green;
   }
 }
 
 @-o-keyframes border {
-  /* line 159, scss/style.css.scss */
+  /* line 149, scss/style.css.scss */
   from {
     color: #4775FF;
   }
 
-  /* line 163, scss/style.css.scss */
+  /* line 153, scss/style.css.scss */
   to {
     color: green;
   }
 }
 
 @keyframes border {
-  /* line 159, scss/style.css.scss */
+  /* line 149, scss/style.css.scss */
   from {
     color: #4775FF;
   }
 
-  /* line 163, scss/style.css.scss */
+  /* line 153, scss/style.css.scss */
   to {
     color: green;
   }
 }
 
-/* line 169, scss/style.css.scss */
+/* line 159, scss/style.css.scss */
 .line {
   width: 0px;
   height: inherit;
