@@ -18,7 +18,7 @@
 
 
 @mixin icon-flip($delay){
-  @include vendor-prefix(animation-duration, 1s);
+  @include vendor-prefix(animation-duration, .8s);
   @include vendor-prefix(animation-delay, $delay);
   @include vendor-prefix(animation-timing-function, ease-in);
   @include vendor-prefix(animation-name, rotate);
@@ -87,7 +87,7 @@ body {
     display: inline-block;
   }
 
-  @include vendor-prefix(animation-duration, 2.5s);
+  @include vendor-prefix(animation-duration, 1.85s);
   @include vendor-prefix(animation-name, slidedown);
   @include vendor-prefix(animation-timing-function, linear);
 
@@ -101,15 +101,15 @@ body {
   }
 
   li:nth-child(2){
-    @include icon-flip(.5s)
+    @include icon-flip(.4s)
   }
 
   li:nth-child(3){
-    @include icon-flip(1s)
+    @include icon-flip(.8s)
   }
 
   li:nth-child(4){
-    @include icon-flip(1.5s)
+    @include icon-flip(1.2s)
   }
 
 }
@@ -158,8 +158,6 @@ body {
   }
 
   a:hover{
-    width: 49px;
-
     @include vendor-prefix(animation-duration, 1s);
     @include vendor-prefix(animation-direction, alternate);
     @include vendor-prefix(animation-iteration-count, infinite);
