@@ -1,42 +1,21 @@
+@import "compass";
+
 body {
 	background-color: black;
 	text-align:center;
 	padding:0 !important;
 }
 
+.container{
+	margin: 0 auto;
+	margin-top:15%;
+
+}
+
 #name {
 	color: white;
 	font-weight:400 !important;	
-	margin-top:15%;
 }
-
-// /* Large desktop */
-// @media (min-width: 1200px) {
-// 	#name {
-// 		margin-top:15%;
-// 	}
-// }
- 
-// /* Portrait tablet to landscape and desktop */
-// @media (min-width: 768px) and (max-width: 979px) {
-// 	#name {
-// 		margin-top:30%;
-// 	}
-// }
-
-// /* Landscape phone to portrait tablet */
-// @media (max-width: 767px) {
-// 	#name {
-// 		margin-top:30%;
-// 	}
-// }
- 
-// /* Landscape phones and down */
-// @media (max-width: 480px) {
-// 	#name {
-// 		margin-top:30%;
-// 	}
-// }
 
 .contacts {
 	display: block;
@@ -60,7 +39,6 @@ body {
 		height: 160px;
 	}
 }
-
 
 
 .contacts li {
@@ -128,31 +106,33 @@ body {
 	height: inherit;
 	display: inline-block;
 	vertical-align: top;
-}
 
-.icon i{
-	font-size:36px;
-}
-.icon .fa-envelope{
-	font-size:30px;
-}
 
-.icon a:visited {
-	color: #4775FF;
-}
+	.fa{
+		font-size:36px;
+	}
+	
+	.fa-envelope{
+		font-size:30px;
+	}
 
-.icon a:link{
-	color: #4775FF;
-}
+	a:visited {
+		color: #4775FF;
+	}
 
-.icon :hover{
-	width: 49px;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-direction: alternate;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-name: border;
+	a:link{
+		color: #4775FF;
+	}
 
+	a:hover{
+		width: 49px;
+
+		-webkit-animation-duration: 1s;
+		-webkit-animation-direction: alternate;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-name: border;
+	}
 }
 
 
@@ -176,7 +156,6 @@ body {
 	border-left: 1px;
 	border-left-style: solid;
 	border-left-color: white;
-
 }
 
 

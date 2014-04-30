@@ -1,18 +1,23 @@
-/* line 1, scss/style.css.scss */
+/* line 3, scss/style.css.scss */
 body {
   background-color: black;
   text-align: center;
   padding: 0 !important;
 }
 
-/* line 7, scss/style.css.scss */
-#name {
-  color: white;
-  font-weight: 400 !important;
+/* line 9, scss/style.css.scss */
+.container {
+  margin: 0 auto;
   margin-top: 15%;
 }
 
-/* line 41, scss/style.css.scss */
+/* line 15, scss/style.css.scss */
+#name {
+  color: white;
+  font-weight: 400 !important;
+}
+
+/* line 20, scss/style.css.scss */
 .contacts {
   display: block;
   list-style: none;
@@ -26,24 +31,24 @@ body {
 }
 
 @-webkit-keyframes slidedown {
-  /* line 55, scss/style.css.scss */
+  /* line 34, scss/style.css.scss */
   from {
     height: 0px;
   }
 
-  /* line 59, scss/style.css.scss */
+  /* line 38, scss/style.css.scss */
   to {
     height: 160px;
   }
 }
 
-/* line 66, scss/style.css.scss */
+/* line 44, scss/style.css.scss */
 .contacts li {
   height: 40px;
   width: inherit;
 }
 
-/* line 71, scss/style.css.scss */
+/* line 49, scss/style.css.scss */
 .contacts li:nth-child(1) {
   -webkit-animation-duration: 1s;
   -webkit-animation-timing-function: ease-in;
@@ -51,7 +56,7 @@ body {
   -webkit-animation-fill-mode: forwards;
 }
 
-/* line 78, scss/style.css.scss */
+/* line 56, scss/style.css.scss */
 .contacts li:nth-child(2) {
   -webkit-animation-duration: 1s;
   -webkit-animation-delay: .5s;
@@ -61,7 +66,7 @@ body {
   -webkit-transform: rotateY(90deg);
 }
 
-/* line 88, scss/style.css.scss */
+/* line 66, scss/style.css.scss */
 .contacts li:nth-child(3) {
   -webkit-animation-duration: 1s;
   -webkit-animation-delay: 1s;
@@ -71,7 +76,7 @@ body {
   -webkit-transform: rotateY(90deg);
 }
 
-/* line 98, scss/style.css.scss */
+/* line 76, scss/style.css.scss */
 .contacts li:nth-child(4) {
   -webkit-animation-duration: 1s;
   -webkit-animation-delay: 1.5s;
@@ -82,18 +87,18 @@ body {
 }
 
 @-webkit-keyframes rotate {
-  /* line 109, scss/style.css.scss */
+  /* line 87, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
   }
 
-  /* line 113, scss/style.css.scss */
+  /* line 91, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
   }
 }
 
-/* line 119, scss/style.css.scss */
+/* line 97, scss/style.css.scss */
 .blank {
   width: 46px;
   height: inherit;
@@ -101,36 +106,31 @@ body {
   vertical-align: top;
 }
 
-/* line 126, scss/style.css.scss */
+/* line 104, scss/style.css.scss */
 .icon {
   width: 46px;
   height: inherit;
   display: inline-block;
   vertical-align: top;
 }
-
-/* line 133, scss/style.css.scss */
-.icon i {
+/* line 111, scss/style.css.scss */
+.icon .fa {
   font-size: 36px;
 }
-
-/* line 136, scss/style.css.scss */
+/* line 115, scss/style.css.scss */
 .icon .fa-envelope {
   font-size: 30px;
 }
-
-/* line 140, scss/style.css.scss */
+/* line 119, scss/style.css.scss */
 .icon a:visited {
   color: #4775FF;
 }
-
-/* line 144, scss/style.css.scss */
+/* line 123, scss/style.css.scss */
 .icon a:link {
   color: #4775FF;
 }
-
-/* line 148, scss/style.css.scss */
-.icon :hover {
+/* line 127, scss/style.css.scss */
+.icon a:hover {
   width: 49px;
   -webkit-animation-duration: 1s;
   -webkit-animation-direction: alternate;
@@ -140,18 +140,18 @@ body {
 }
 
 @-webkit-keyframes border {
-  /* line 160, scss/style.css.scss */
+  /* line 140, scss/style.css.scss */
   from {
     color: #4775FF;
   }
 
-  /* line 164, scss/style.css.scss */
+  /* line 144, scss/style.css.scss */
   to {
     color: red;
   }
 }
 
-/* line 170, scss/style.css.scss */
+/* line 150, scss/style.css.scss */
 .line {
   width: 0px;
   height: inherit;
