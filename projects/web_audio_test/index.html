@@ -40,11 +40,7 @@
           source.buffer = songData[trackNumber].buffer;
           source.connect(myAudioContext.destination);
 
-          // The third track happens to have a second or so of
-          // silence in the beginning so start at second 3
-          // for better demonstration purposes
-          if(trackNumber === 2) source.start(0,3);
-          else source.start(0);
+          source.start(0);
         };
 
         // stop playing
@@ -72,36 +68,31 @@
 
         $('#skip').on('click', skip);
 
-        $('#buffer').on('click', function(){
-          $(this).prop('disabled', true);
-          $('#message').text("Buffering...");
-
-          async.map(songUrls, function(url, cb){
-            request = new XMLHttpRequest();
-            request.open('GET', url, true);
-            request.responseType = 'arraybuffer';
-            request.addEventListener('load', function(event){
-              try {
-                var request = event.target;
-                var source = myAudioContext.createBufferSource();
-                source.buffer = myAudioContext.createBuffer(request.response, false);
-                return cb(null, source);
-              } catch (err){
-                return cb(err);
-              }
-            }, false);
-            request.send();
-
-          },function(err, result){
-            if(err) {
-              $('#message').text("Error Buffering: " + err);
-              return;
+        async.map(songUrls, function(url, cb){
+          request = new XMLHttpRequest();
+          request.open('GET', url, true);
+          request.responseType = 'arraybuffer';
+          request.addEventListener('load', function(event){
+            try {
+              var request = event.target;
+              var source = myAudioContext.createBufferSource();
+              source.buffer = myAudioContext.createBuffer(request.response, false);
+              return cb(null, source);
+            } catch (err){
+              return cb(err);
             }
-            songData = result;
-            $('#play').prop('disabled', false);
-            $('#skip').prop('disabled', false);
-            $('#message').text("Buffered!")
-          });
+          }, false);
+          request.send();
+
+        },function(err, result){
+          if(err) {
+            $('#message').text("Error Buffering: " + err);
+            return;
+          }
+          songData = result;
+          $('#play').prop('disabled', false);
+          $('#skip').prop('disabled', false);
+          $('#message').text("Buffered!")
         });
 
       });
@@ -109,7 +100,6 @@
 
     <style>
       .btn { font-size: 30px; }
-
     </style>
 
   </head>
@@ -117,11 +107,7 @@
     <div class="row">
       <div class="col-md-8 well">
         <h1>Web Audio API test</h1>
-        <h3><span style="color:red;">Warning:</span> This page will buffer ~10MB of audio data</h3>
-        <h4>Press the "Buffer" button to continue</h4>
-        <button id="buffer" class="btn btn-warning" style="height:80px;width:200px">Buffer  <i class="glyphicon glyphicon-warning-sign"></i></button>
-        <span id="message" style="font-size:36px">&nbsp</span>
-        <br>
+        <span id="message" style="font-size:36px">Buffering...</span>
         <br>
 
         <button disabled="disabled" id="play" class="btn btn-success btn-lg btn-block" style="height:120px;"><i class="glyphicon glyphicon-play"></i> Play</button>
