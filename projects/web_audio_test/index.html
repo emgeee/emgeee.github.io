@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <title>Web Audio API test</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/async/0.9.0/async.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        if('webkitAudioContext' in window) {
+          var myAudioContext = new webkitAudioContext();
+        } else {
+          var myAudioContext = new AudioContext();
+        }
+
+        // Add a list of song URLs here, the
+        // audio download must be CORS compatible
+        var songUrls = [
+          'test1.mp3',
+          'test2.mp3',
+          'test3.mp3',
+        ];
+
+        // store the buffered songs
+        var songData = [];
+
+        var playing = false;
+
+        // which song in the playlist
+        var trackNumber = 0;
+        var source;
+
+        var play = function(){
+          playing = true;
+
+          // Create a new Audio buffer source and start playing
+          source = myAudioContext.createBufferSource();
+          source.buffer = songData[trackNumber].buffer;
+          source.connect(myAudioContext.destination);
+
+          // The third track happens to have a second or so of
+          // silence in the beginning so start at second 3
+          // for better demonstration purposes
+          if(trackNumber === 2) source.start(0,3);
+          else source.start(0);
+        };
+
+        // stop playing
+        var pause = function(){
+          playing = false;
+          source.stop(0);
+        }
+
+        // skip to the next track
+        var skip = function(){
+          trackNumber = (trackNumber + 1) % songUrls.length;
+          pause();
+          play();
+        };
+
+        $('#play').on('click', function(){
+          if(playing){
+            pause();
+            this.innerHTML = '<i class="glyphicon glyphicon-play"></i> Restart';
+          } else {
+            play();
+            this.innerHTML = '<i class="glyphicon glyphicon-pause"></i> Pause';
+          }
+        });
+
+        $('#skip').on('click', skip);
+
+        $('#buffer').on('click', function(){
+          $(this).prop('disabled', true);
+          $('#message').text("Buffering...");
+
+          async.map(songUrls, function(url, cb){
+            request = new XMLHttpRequest();
+            request.open('GET', url, true);
+            request.responseType = 'arraybuffer';
+            request.addEventListener('load', function(event){
+              try {
+                var request = event.target;
+                var source = myAudioContext.createBufferSource();
+                source.buffer = myAudioContext.createBuffer(request.response, false);
+                return cb(null, source);
+              } catch (err){
+                return cb(err);
+              }
+            }, false);
+            request.send();
+
+          },function(err, result){
+            if(err) {
+              $('#message').text("Error Buffering: " + err);
+              return;
+            }
+            songData = result;
+            $('#play').prop('disabled', false);
+            $('#skip').prop('disabled', false);
+            $('#message').text("Buffered!")
+          });
+        });
+
+      });
+    </script>
+
+    <style>
+      .btn { font-size: 30px; }
+
+    </style>
+
+  </head>
+  <body class="container">
+    <div class="row">
+      <div class="col-md-8 well">
+        <h1>Web Audio API test</h1>
+        <h3><span style="color:red;">Warning:</span> This page will buffer ~10MB of audio data</h3>
+        <h4>Press the "Buffer" button to continue</h4>
+        <button id="buffer" class="btn btn-warning" style="height:80px;width:200px">Buffer  <i class="glyphicon glyphicon-warning-sign"></i></button>
+        <span id="message" style="font-size:36px">&nbsp</span>
+        <br>
+        <br>
+
+        <button disabled="disabled" id="play" class="btn btn-success btn-lg btn-block" style="height:120px;"><i class="glyphicon glyphicon-play"></i> Play</button>
+        <button disabled="disabled" id="skip" class="btn btn-primary btn-lg btn-block" style="height:120px;"><i class="glyphicon glyphicon-forward"></i> Skip</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 well">
+        <div>
+          Orginial Blog post: <a href="http://blog.emgeee.com/2014/05/buffering-audio-in-parallel-on-mobile.html">http://blog.emgeee.com/2014/05/buffering-audio-in-parallel-on-mobile.html</a>
+        </div>
+
+        <br>
+        <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://freemusicarchive.org/music/Roulet/Beats_dAmor/">
+          Music by: <span property="dct:title">Beats d'Amor</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://rouletproducer.bandcamp.com/album/home-again">Roulet</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
