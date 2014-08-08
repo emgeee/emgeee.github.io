@@ -34,7 +34,7 @@
   }
 
   to {
-    height: 160px;
+    height: 200;
   }
 }
 
@@ -61,7 +61,12 @@
 
 
 body {
-  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+
+  background-image: url('img/bg.png');
+  background-repeat: repeat;
+
+
   text-align: center;
   padding:0 !important;
 }
@@ -73,7 +78,7 @@ body {
 
 #name {
   color: white;
-  font-weight:400 !important; 
+  font-weight:400 !important;
 }
 
 .contacts {
@@ -96,25 +101,25 @@ body {
     width: inherit;
   }
 
+  $delay: .4s;
+
   li:nth-child(1){
     @include icon-flip(0s)
   }
 
   li:nth-child(2){
-    @include icon-flip(.4s)
+    @include icon-flip($delay)
   }
 
   li:nth-child(3){
-    @include icon-flip(.8s)
+    @include icon-flip(2*$delay)
   }
 
   li:nth-child(4){
-    @include icon-flip(1.2s)
+    @include icon-flip(3*$delay)
   }
 
 }
-
-
 
 .blank {
   width: 46px;
@@ -134,12 +139,21 @@ body {
   border-left-color: white;
 }
 
-.icon {
-  width: 46px;
-  height: inherit;
-  display: inline-block;
-  vertical-align: top;
+.link {
+  &.icon {
+    width: 46px;
+    height: inherit;
+    display: inline-block;
+    vertical-align: top;
+  }
 
+  &.blog {
+
+    a {
+      font-size: 26px;
+      text-decoration: none;
+    }
+  }
 
   .fa{
     font-size:36px;
