@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives: 2014 | Makeshift Notebook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Makeshift Notebook">
+<meta property="og:url" content="http://emgeee.com/blog//blog/archives/2014/">
+<meta property="og:site_name" content="Makeshift Notebook">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Makeshift Notebook">
+<meta name="twitter:description">
+  
+    <link rel="alternative" href="/atom.xml" title="Makeshift Notebook" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/blog/css/style.css" type="text/css">
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36570860-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog//" id="logo">Makeshift Notebook</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog//">Home</a>
+        
+          <a class="main-nav-link" href="/blog//archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://emgeee.com/blog/"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-naturally-sorting-with-gulp" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/naturally-sorting-with-gulp/" class="article-date">
+  <time datetime="2014-08-02T20:54:00.000Z" itemprop="datePublished">Aug 2 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/naturally-sorting-with-gulp/">Naturally Sorting a Filestream with Gulp</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Recently, I’ve been developing a custom static site generator using
+<a href="http://gulpjs.com/" target="_blank" rel="external">gulp</a>. Among other things, one of the requirements of the
+site is to automatically process multiple markdown files into webpages for
+inclusion on the site. As an author of long markdown documents, it’s often
+convenient to split these documents into multiple files and give them names
+with numbers to signify what order they should be assembled then. This presents
+a problem, however, because computer programs tend to sort strings in
+<a href="http://en.wikipedia.org/wiki/ASCII#Order" target="_blank" rel="external">ASCIIbetical order</a> meaning they are
+sorted by comparing character ASCII values to each other.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre>$ ls -<span class="number">1</span>
+part-<span class="number">1</span>.md
+part-<span class="number">10</span>.md
+part-<span class="number">2</span>.md
+part-<span class="number">3</span>.md
+part-<span class="number">4</span>.md
+part-<span class="number">5</span>.md
+part-<span class="number">6</span>.md
+part-<span class="number">7</span>.md
+part-<span class="number">8</span>.md
+part-<span class="number">9</span>.md
+</pre></td></tr></table></figure>
+
+<p>When we try and feed these files through our gulp pipeline, <code>part-10.md</code> will
+be inserted between <code>part-1.md</code> and <code>part-2.md</code>. The way to get around this
+problem is by using something called a “natural sort” which attempts to sort
+names in way a human would do so. There are many different implementations of
+this sort that will try to recognize all sorts of things from dates and times
+to IP addresses. The sort is not always perfect but for my purposes of sorting
+alphanumeric strings in a logical way, it works just fine.</p>
+<p>In order to incorporate this sort into my gulp pipeline, I created a quick gulp
+plugin that when applied to a stream, will re-emit the files in a naturally
+sorted way. It uses the
+<a href="https://www.npmjs.org/package/natural-compare-lite" target="_blank" rel="external">natural-compare-lite</a>
+library but can be easily modified to use any other sorting algorithm.</p>
+<p>Head on over to <a href="https://www.npmjs.org/package/gulp-natural-sort" target="_blank" rel="external">npm</a> to check
+it out or view the source code over at
+<a href="https://github.com/emgeee/gulp-natural-sort" target="_blank" rel="external">github</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://emgeee.com/blog/naturally-sorting-with-gulp/" data-id="etxtr7og3yjie4vp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/plugins/">plugins</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-livereload-with-cordova-and-gulp" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/livereload-with-cordova-and-gulp/" class="article-date">
+  <time datetime="2014-06-13T02:33:00.000Z" itemprop="datePublished">Jun 12 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/livereload-with-cordova-and-gulp/">Livereload with Cordova and Gulp</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I recently started on an
+<a href="http://ionicframework.com/" target="_blank" rel="external">Ionic</a>/<a href="http://cordova.apache.org/" target="_blank" rel="external">Cordova</a> app
+that uses <a href="http://gulpjs.com/" target="_blank" rel="external">Gulp</a> as the main build system. While I’ve used
+<a href="http://gruntjs.com/" target="_blank" rel="external">Grunt</a> several times in the past I have found Gulp to be
+much more of an intuitive approach and definitely easier to work with.</p>
+<p> <img src="http://3.bp.blogspot.com/-v9Z1NslDIYA/U5oAC052K3I/AAAAAAAAAXs/V88Gf_1cOT8/s1600/gulp_cordova_livereload.png" alt=""></p>
+<p>In a Cordova project, you develop the application in the <strong>$ROOT_DIR/www/</strong>
+directory. When you build the project for ios, Cordova copies those files from
+that directory to <strong>$ROOT_DIR/platforms/ios/www</strong> directory. In order to
+streamline the development process, I wanted to make use of<br><a href="http://livereload.com/" target="_blank" rel="external">livereload</a> via the 
+<a href="https://github.com/vohof/gulp-livereload" target="_blank" rel="external">gulp-livereload</a> and
+<a href="https://github.com/fingerproof/cordova-plugin-gapreload" target="_blank" rel="external">cordova-gapreload</a> plugins.
+The basic setup is to use Gulp to watch for changes in the www/ directory and
+when a change is detected, copy the file to the appropriate location in the
+<strong>platforms/ios/www</strong> directory before triggering livereload. The main reason
+for copying files is that the gapreload plugin looks for assets served relative
+to the <strong>platforms/</strong> directory.</p>
+<p>As you’d expect with any project, asset files can be numerous and the build
+system itself should not impose a restriction on nested folders. These
+requirements make manually listing files and structures an onerous task that
+should be avoided. Fortunately, file
+<a href="http://en.wikipedia.org/wiki/Glob_(programming" target="_blank" rel="external">globbing</a>) exists precisely to
+simplify this task. When specifying files to watch, you can use a glob pattern
+to match multiple files in many directories with a single expression. For
+example, to watch all files in the <strong>www/</strong> directory, you could specify a
+route glob as such:  <strong>www/**</strong></p>
+<p><strong>Important:</strong>  Pretty much every JS library I’ve found that does any sort of
+route matching with globs uses the
+<a href="https://github.com/isaacs/minimatch" target="_blank" rel="external">minimatch</a> library. Currently this
+library has what I consider to be unintuitive, undocumented, and even incorrect
+behavior. The library does not do path normalization before matching which
+leads to the library not recognizing the equality of paths prefixed with the
+relative “./“ compared to those that are not. Thus a glob specified as
+.<strong>/www/**/*.js</strong> would <strong>NOT</strong> match the path <strong>www/app/test.js</strong> . In the
+Gulp ecosystem at least, it seems that path names are piped between processes
+without the “./“ so I would recommend that <strong>any relative paths or globs you
+manually specify not have the “./“ prefix.</strong></p>
+<p>Once you have Gulp setup to properly watch your asset files and copy them to
+the appropriate directory, the next step is to configure a basic http server to
+serve those assets, then trigger a livereload. I fulfilled the first
+requirement using the simple
+<a href="https://github.com/jesusabdullah/node-ecstatic" target="_blank" rel="external">ecstatic</a> module configured to
+serve all files from the <strong>platforms/ios/www/</strong> directory on port 8000. <strong>Make
+sure your assets are served with a very short cache time</strong> . This can be done
+with ecstatic by specifying <strong>cache: 0</strong>  in the config object.   Once Gulp
+copies a changed file to the appropriate directory, pipe the new file to
+livereload to trigger the change.</p>
+<p>The final step is to install the the Cordova plugin. From your root directory
+type: <code>cordova plugin add pro.fing.cordova.gapreload --variable
+SERVER\_HOST=&quot;&lt;host&gt;&quot;</code> where <strong><host></host></strong>  is the is the computer the files are
+hosted from. If you’re developing with the emulator, this would probably be
+<strong>localhost</strong>  however you can also specify any IP  you want meaning you can
+use this setup when developing with an actual device</p>
+<h3 id="Conclusion_That’s_pretty_much_it!_Now_when_you_save_a_file,_Gulp_should">Conclusion That’s pretty much it! Now when you save a file, Gulp should</h3>
+<p>automatically detect the file has changed, copy it to the platforms directory,
+then trigger a livereload action. You app running in the emulator should
+instantly receive the livereload notification, load the changed file from the
+server, then refresh the webview so the changes take effect.</p>
+<h3 id="Caveats_This_setup_has_been_working_pretty_well_for_me_however_there_are">Caveats This setup has been working pretty well for me however there are</h3>
+<p>some caveats that are important to mention. First of all, when using the
+gapreload plugin XMLHttpRequests will be subject to cross origin restrictions
+meaning you won’t be able to make normal requests to servers that don’t have
+CORS enabled, even if you whitelist the domain in your config.xml.</p>
+<p>Below are the relevant portions of my Gulpfile.js:</p>
+<script src="https://gist.github.com/emgeee/29e3f4c3674a08923c2f.js"></script>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://emgeee.com/blog/livereload-with-cordova-and-gulp/" data-id="e7jsuez1c5jlluup" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/apps/">apps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/cordova/">cordova</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/howto/">howto</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/livereload/">livereload</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-buffering-audio-in-parallel-on-mobile" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/buffering-audio-in-parallel-on-mobile/" class="article-date">
+  <time datetime="2014-06-01T11:02:00.000Z" itemprop="datePublished">Jun 1 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/buffering-audio-in-parallel-on-mobile/">Buffering Audio in Parallel on Mobile with Web Audio API</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Introduction">Introduction</h3>
+<p>The HTML audio element is pretty powerful, unfortunately, mobile browsers tend to restrict it by not letting you play more than one audio stream at once. Furthermore, these browsers will also restrict buffering multiple audio tracks making seamless audio switching difficult at best. While these restrictions are fine for most applications, some apps require many sounds to be played in quick succession. Games with sound effects are the biggest victim of this policy and the most commonly used strategy to circumvent it is to use <a href="https://hacks.mozilla.org/2012/04/html5-audio-and-audio-sprites-this-should-be-simple/" target="_blank" rel="external">audio sprites</a>. Below, I will discuss an alternate method that makes use of XMLHttpRequests and the experimental Web Audio API to buffer audio files in parallel then seamless switch between them.</p>
+<h3 id="Solution">Solution</h3>
+<p>The first thing we need to do is setup our Web Audio API context. Because the spec has yet to be finalized, it may be necessary to use a vendor prefix:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="keyword">if</span> (<span class="string">'webkitAudioContext'</span> <span class="keyword">in</span> window) {
+  <span class="keyword">var</span> myAudioContext = <span class="keyword">new</span> webkitAudioContext();
+} <span class="keyword">else</span> {
+  <span class="keyword">var</span> myAudioContext = <span class="keyword">new</span> AudioContext();
+}
+</pre></td></tr></table></figure>
+
+<p>Here, we simple check to see if the prefixed version exists, if not we use the non prefixed version.</p>
+<p>The XMLHttpRequest object has received some major updates in the last few years. In addition to being able to send and receive text, it can now do the same with <a href="https://developer.mozilla.org/en-US/docs/Web/API/ArrayBuffer" target="_blank" rel="external">arraybuffers</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" rel="external">blobs</a>, and documents. Using the wonderful <a href="https://github.com/caolan/async" target="_blank" rel="external">Async.js</a> library, we simultaneously download multiple audio files as arraybuffers and save them for playback later:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="code"><pre><span class="keyword">var</span> songUrls = [ <span class="comment">/* list of song URLs to buffer */</span> ];
+<span class="keyword">var</span> songData = [];
+async.map(songUrls, <span class="function"><span class="keyword">function</span> <span class="params">(url, cb)</span> {</span>
+  request = <span class="keyword">new</span> XMLHttpRequest();
+  request.open(<span class="string">'GET'</span>, url, <span class="literal">true</span>);
+  request.responseType = <span class="string">'arraybuffer'</span>;
+  request.addEventListener(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(event)</span> {</span>
+    <span class="keyword">try</span> {
+      <span class="keyword">var</span> request = event.target;
+      <span class="keyword">var</span> source = myAudioContext.createBufferSource();
+      source.buffer = myAudioContext.createBuffer(request.response, <span class="literal">false</span>);
+      <span class="keyword">return</span> cb(<span class="literal">null</span>, source);
+    } <span class="keyword">catch</span> (err) {
+      <span class="keyword">return</span> cb(err);
+    }
+  }, <span class="literal">false</span>);
+  request.send();
+}, <span class="function"><span class="keyword">function</span> <span class="params">(err, result)</span> {</span>
+  <span class="keyword">if</span> (err) {
+    $(<span class="string">'#message'</span>).text(<span class="string">"Error Buffering: "</span> + err);
+    <span class="keyword">return</span>;
+  }
+  songData = result;
+});
+</pre></td></tr></table></figure>
+
+<p>You’ll notice that once the array buffer is finished downloading we immediately create a new <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode" target="_blank" rel="external">AudioBufferSourceNode</a> and populate it with the downloaded data using the createBuffer method (bonus: the preferred way to do this step is to use the <a href="http://docs.webplatform.org/wiki/apis/webaudio/AudioContext/decodeAudioData" target="_blank" rel="external">decodeAudioData()</a> method because it’s asynchronous and has better error handling).</p>
+<p>At this point, we now have an array of audio buffers so let’s look at how to play them back. The Web Audio API is based on the concept of nodes which allow you to channel data through various transformation functions before finally outputting it. For the sake of this tutorial, all we care about is playback so all we need to do is connect one of the buffers to the output device. We do that using the <strong>connect()</strong>  method:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>songData[<span class="number">0</span>].connect(myAudioContext.destination);
+</pre></td></tr></table></figure>
+
+<p>Although we can start playing the audio now, it is not ideal to do so because audio buffers cannot be restarted. To get around this, we first clone the audio buffer we want to playback:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>source = myAudioContext.createBufferSource(); source.buffer = songData[<span class="number">0</span>].buffer; source.connect(myAudioContext.destination); source.start(<span class="number">0</span>);
+</pre></td></tr></table></figure>
+
+<p>Now, if we want to restart the track or switch to a new track, we can do so by calling <strong>source.stop(0)</strong>  then clone the next audio buffer and start playing it.</p>
+<p>A working implementation of this method can be found at  <a href="http://emgeee.com/projects/web_audio_test" target="_blank" rel="external">http://emgeee.com/projects/web_audio_test</a></p>
+<h3 id="Limitations">Limitations</h3>
+<p>While the method described overcome some of the limitations imposed by mobile browsers, it is still constrained by the need for some sort of user interaction before the audio can start playing. On the bright side, we can at least buffer the audio before hand so that when the user does hit play, the audio will start immediately. Normal HTML5 <audio> elements on mobile aren’t allowed to buffer until after the user hits play.</audio></p>
+<p>Unlike the <audio> element, this method is also limited by XSS policies imposed by the browser. This means you will only be able to use it to stream media from the same domain or from a server that has CORS enabled.</audio></p>
+<h3 id="Conclusion">Conclusion</h3>
+<p>This post describes a method for buffering audio in parallel and playing it back using the experimental Web Audio API.  I expect this method will become more robust in the future as the API is further standardized across browsers. I have tested this solution on both Chrome 35 for Android and Mobile Safari running on IOS7 with great results. Unfortunately, the stock Android browser does not support Web Audio, which is particularly unfortunate because that is what is used to run hybrid Cordova apps. For those looking to target IOS exclusively, however, I see this as a viable solution.</p>
+<h3 id="Useful_links">Useful links</h3>
+<ul>
+<li><a href="https://developer.apple.com/library/safari/documentation/audiovideo/conceptual/using_html5_audio_video/PlayingandSynthesizingSounds/PlayingandSynthesizingSounds.html" target="_blank" rel="external">https://developer.apple.com/library/safari/documentation/audiovideo/conceptual/using_html5_audio_video/PlayingandSynthesizingSounds/PlayingandSynthesizingSounds.html</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Web/API</a></li>
+</ul>
+<h3 id="Full_Sample_Code">Full Sample Code</h3>
+<script src="https://gist.github.com/emgeee/44ef1c5e65fa85d85a8a.js"></script>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://emgeee.com/blog/buffering-audio-in-parallel-on-mobile/" data-id="2l8mcq2xvav5880h" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/hacks/">hacks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/mobile/">mobile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/web-audio/">web audio</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-homebrew-and-python-tale-of-installing" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/homebrew-and-python-tale-of-installing/" class="article-date">
+  <time datetime="2014-05-17T07:15:00.000Z" itemprop="datePublished">May 17 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/homebrew-and-python-tale-of-installing/">Homebrew and Python - A tale of Installing Powerline</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Introduction">Introduction</h3>
+<p>The other day I was attempting to install <a href="https://github.com/Lokaltog/powerline" target="_blank" rel="external">powerline</a> to make my Vim setup look prettier when I ran into some trouble with how my system was configured. For those who don’t know, powerline is a neat status bar written in Python that provides various visual cues like what mode you are currently in. The  <a href="https://powerline.readthedocs.org/en/latest/installation/osx.html#installation-osx" target="_blank" rel="external">instructions</a> for Mac told me install the package via <a href="https://pypi.python.org/pypi/pip" target="_blank" rel="external">pip</a>, a Python package management system. This sounded easy enough however I quickly ran into some nuanced issues that had to be resolved.</p>
+<p><img border="0" height="10" src="https://raw.github.com/Lokaltog/powerline/develop/docs/source/_static/img/pl-mode-normal.png" width="400"></p>
+<h3 id="Default_Python_on_Mac">Default Python on Mac</h3>
+<p>By default, OSX comes preinstalled with several versions of Python. Theses version are used as dependencies for various software and, in general, should not really be messed with. The executables are made available via the <strong>/usr/bin</strong>  directory and should link back to <strong>/System/Library/Frameworks/Python.framework/Versions/2.7/bin/</strong> . This is all well and good, however, there are a few problems: firstly, the version of Python in this directory is not necessarily up to day. For me, <strong>/usr/bin/python —version</strong>  yields version 2.7.5 while the most recent version is 2.7.6. More importantly, installing Python packages via the included version of pip require root access (<strong>sudo pip install <package name=""></package></strong>) because packages are saved to  <strong>/Library/Python/2.7/site-packages</strong>. Automatically running install scripts that are downloaded form the internet with root privileges is generally considered a possibly security risk and is something I strive to avoid at all cost.</p>
+<h3 id="Enter_Homebrew">Enter Homebrew</h3>
+<p>To rectify both these issues, I used the wonderful <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a> (brew) package management system. By design, brew promises to never write files outside the directory specified by <strong>brew —prefix</strong>  which defaults to <strong>/usr/local/</strong>. Package information is saved to <strong>/usr/local/Cellar</strong> and executables are linked to <strong>/usr/local/bin</strong> . The beauty of this is that these directories don’t require root privileges to write to meaning if you ever need to <strong>sudo brew</strong>  anything, you’re probably doing something wrong.</p>
+<p>To install an updated version of python, simple enter <code>brew install python</code>. Because brew will detect you already have a version of python installed on your system, it may be necessary to run <strong>brew link python</strong>, which will symlink the appropriate executables to <strong>/usr/local/bin</strong> . Now, assuming you have <strong>/usr/local/bin</strong>  in your $PATH (which you should), invoking <code>which python</code> should show you that you are now running the brewed version of python and <code>python --version</code> should now yield 2.7.6.</p>
+<p>Rejoice! You should now have an updated version of python installed and managed by brew. <strong>which pip</strong>  should also show you are running the version that accompanied the brewed python.</p>
+<h3 id="Installing_powerline">Installing powerline</h3>
+<p>As mentioned earlier, powerline can be installed using pip. The exact command given by <a href="https://powerline.readthedocs.org/en/latest/installation/osx.html#installation-osx" target="_blank" rel="external">the documentation</a> is <code>pip install --user git+git://github.com/Lokaltog/powerline</code>.</p>
+<p>Unfortunately, this presents an issue for brewed python. According to the brew-python documentation at <a href="https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python" target="_blank" rel="external">https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python</a>. The normal <code>pip install --user</code> is disabled for brewed Python. This is because of a bug in distutils, because Homebrew writes a <code>distutils.cfg</code> which sets the package <code>prefix</code>. Fortunately, the fix is quite simple. If you’ve installed python via brew, you can safely remove the <strong>—user</strong>  flag, which instructs pip to install the package into the <code>~/Library/Python/&lt;x&gt;.&lt;y&gt;/lib/python/site-packages/</code> directory. Instead, pip will install the package into  <code>/usr/local/lib/python2.7/site-packages</code>, which shouldn’t require root privileges.</p>
+<h3 id="Configuring_Vim">Configuring Vim</h3>
+<p>The final step is to configure Vim (or whatever else you’d like to user powerline for). If, like me, you use vim or macvim installed through brew, you may have to do one last step. In order for powerline to work, Vim needs to be compiled with python support. Brew does this automatically at install time howeve, it relies on the first version of python found in the user’s $PATH when the program is installed. If you did not have brew installed python at the time you installed vim or macvim, you will need to reinstall these versions using something like  <strong>brew reinstall macvim <insert options="" like="" --enable-lua=""></insert></strong>. Vim will now be linked against the correct version of python and have access to the installed modules.</p>
+<p>You should now be able to add the following lines to your vimrc file and bask in the glory of a nifty status bar</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>python <span class="keyword">from</span> powerline.vim <span class="keyword">import</span> setup <span class="keyword">as</span> powerline_setup
+python powerline_setup()
+python <span class="keyword">del</span> powerline_setup
+</pre></td></tr></table></figure>
+
+<p>Those are some of the things I learned while wrestling with brew and python for several hours. I have been using brew for a year or so prior to this without necessarily understanding some of the finer points of the system and no doubt had a lot of cruft on my machine as a result. Hopefully something in this post can save someone out there some time and/or headaches.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://emgeee.com/blog/homebrew-and-python-tale-of-installing/" data-id="4yeu5ekp8oc332os" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/brew/">brew</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/howto/">howto</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/powerline/">powerline</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/vim/">vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ergodox-build-log" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/ergodox-build-log/" class="article-date">
+  <time datetime="2014-04-29T09:17:00.000Z" itemprop="datePublished">Apr 29 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/ergodox-build-log/">Ergodox Build Log</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>For anyone how hasn’t heard of the <a href="http://ergodox.org/" target="_blank" rel="external">Ergodox keyboard</a> it
+represents the state of the art in keyboard technology, at least if you don’t
+care about having a mini OLED screen embedded in each key. The Ergodox has 3
+qualities that make it a keyboard unique: it’s physically separated into two
+halves, it adds new keys to form two distinct thumb clusters (similar to the
+<a href="http://www.kinesis-ergo.com/shop/advantage-for-pc-mac/" target="_blank" rel="external">Kinesis</a>), and its
+design is fully open source. All of these qualities combine to form a keyboard
+that is great for someone who regularly sits in front of a computer long
+enough to figure out how to actually build one — it’s ergonomically sound and
+every key is reprogrammable. I ordered one off of
+<a href="https://www.massdrop.com/home" target="_blank" rel="external">Massdrop</a>; here’s how I built
+it:</p>
+<p>The components arrived in a box unassembled and cushioned by bubble wrap. I
+opted for the cherry MX blue switches and the extended palm rest for this
+build. Although I would have preferred brown switches, supply issues made is
+so that those weren’t an option in the particular drop I participated in and I
+wasn’t in the mood to source switched myself. Besides, if I was going to
+assemble the keyboard anyways, I figured I could always unassembled it later
+(or just buy a new
+one).</p>
+<p><img border="0" src="http://2.bp.blogspot.com/-7gGV__dd9IY/U1782TM65lI/AAAAAAAAAVY/8IY4pPeEAOE/s1600/IMG_20140225_193902.jpg" height="320" width="240"></p>
+<p><img border="0" src="http://3.bp.blogspot.com/-Y3eCchocE3A/U1786Gqxj_I/AAAAAAAAAVg/VmYW5qXoAmc/s1600/IMG_20140225_194000.jpg" height="240" width="320"></p>
+<p><img border="0" src="http://3.bp.blogspot.com/--P0TUjesEy0/U1786czSrxI/AAAAAAAAAVo/4ELRN29VtJM/s1600/IMG_20140227_215522.jpg" height="240" width="320"></p>
+<p>Because the build was going to require a good amount of soldering, I opted to
+splurge a little bit on a decent soldering iron. I picked up a Weller
+WES51with adjustable temperature for around $80 on Amazon and a generic solder
+sucker for the occasional screwup. Because this build requires soldering
+surface mount diodes, I highly recommend using a quality rig and if you can
+get a fine solder tip, that’s even
+better.</p>
+<p><img border="0" src="http://1.bp.blogspot.com/-koxGLpIjPFk/U1787Ru2O6I/AAAAAAAAAV4/5OxWYNbfu28/s1600/IMG_20140428_171950.jpg" height="240" width="320"></p>
+<p>The build began by soldering on a few resistors, headers, the headphone TRRS
+jacks, and the Teensey micro-controller that serves as the brains of the
+keyboard. The Ergodox PCB is designed such that both halves are actually
+copies of the same PCB so one arbitrary choice later, I was happily on my way
+to a semi-populated board. The kit contained two mini-B cables, one for
+connecting the keyboard to the computer, and another for connecting the Teensy
+micro-controller to the PCB. In order to accomplish the second task, the cable
+had to be cannibalized so the connector would fit into the casing. Doing so
+proved to be the most difficult (and dangerous) part of the entire build. I
+opted to slowly whittle away at the insulation with a sharp knife, however, I
+have heard that a Dremel is the most effective
+method.</p>
+<p>!(<a href="http://1.bp.blogspot.com/-koxGLpIjPFk/U1787Ru2O6I/AAAAAAAAAV4/5OxWYNbfu28/s1600/IMG_20140428_171950.jpg" target="_blank" rel="external">http://1.bp.blogspot.com/-koxGLpIjPFk/U1787Ru2O6I/AAAAAAAAAV4/5OxWYNbfu28/s1600/IMG_20140428_171950.jpg</a>)</p>
+<p><img border="0" src="http://3.bp.blogspot.com/-5rSK1lHs0HY/U1786biMsUI/AAAAAAAAAVk/dllqd4LC7bc/s1600/IMG_20140301_152137.jpg" height="300" width="400"></p>
+<p>The next part is probably the part most people have trouble with. The plans
+call for surface mount diodes to be painfully soldered next to each switch on
+the PCB. Needle tweezers are a must in this situation and I found it easiest
+to place a small dab of solder on one of the pads, then hold the diode over
+the pad while re-melting the solder and moving the diode into the proper
+position. Solder flux would have been very helpful in this situation however,
+I did not have any on hand so I opted to charge ahead without it. During this
+step, it’s absolutely important to ensure that each diode is <strong>facing the
+proper direction</strong> . Failing to do so will render the keyboard inoperable and
+you will have to go back and correct each incorrect diode. For this build, the
+tiny grey stipe on the diode should be facing the square pad.</p>
+<p>The next step is to begin mounting each switch onto acrylic frame. Because the
+switches included in this kit are of the plate mounted kinda, as opposed to
+the PCB mounted types, this step must be done before soldering them on the
+board. This also means that if you want to change the case, you will have to
+desolder every switch in order to fully liberate the PCB. These plate mounted
+switches tend to be more durable than the alternatives, so that’s a win for
+stability, still, it makes me sad that once you continue past this step,
+you’re locked into using the original acrylic case.</p>
+<p>I found it best to mount and solder each of the corner switches first before
+filling in the middle. This makes it easier to line up the switches with their
+respective holes. After this step is finished, be sure to inspect your work
+and make sure every lead has enough solder on it and no
+<a href="https://learn.adafruit.com/adafruit-guide-excellent-soldering/common-problems" target="_blank" rel="external">solder bridges</a>
+exist that could short circuit your keyboard. At this point, you should be
+able to connect the two halves of the keyboard and plug it into your computer.
+You’ll have to flash the Teensy with the appropriate firmware but after doing
+that, you should have a fully functioning keyboard, all that’s left is to
+finish assembling the case and installing the
+keycaps.</p>
+<p>The end result: my fully assembled Ergodox!
+<img alt="Fully assembled ergodox" border="0" src="http://3.bp.blogspot.com/-tcgCeaelnJw/U18I0h8ckEI/AAAAAAAAAWQ/FlpcAKq-tdo/s1600/IMG_20140428_190406.jpg" height="480" title="Fully assembled ergodox" width="640"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://emgeee.com/blog/ergodox-build-log/" data-id="h2z8fush9pv1u5v6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ergodox/">ergodox</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/keyboard/">keyboard</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/apps/">apps</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/brew/">brew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/cordova/">cordova</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ergodox/">ergodox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/gulp/">gulp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/hacks/">hacks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/howto/">howto</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/keyboard/">keyboard</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/livereload/">livereload</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/mobile/">mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/plugins/">plugins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/powerline/">powerline</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/thailand/">thailand</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/travel/">travel</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vim/">vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/web-audio/">web audio</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/apps/" style="font-size: 10.00px;">apps</a><a href="/blog/tags/brew/" style="font-size: 10.00px;">brew</a><a href="/blog/tags/cordova/" style="font-size: 10.00px;">cordova</a><a href="/blog/tags/ergodox/" style="font-size: 10.00px;">ergodox</a><a href="/blog/tags/gulp/" style="font-size: 20.00px;">gulp</a><a href="/blog/tags/hacks/" style="font-size: 10.00px;">hacks</a><a href="/blog/tags/howto/" style="font-size: 20.00px;">howto</a><a href="/blog/tags/keyboard/" style="font-size: 10.00px;">keyboard</a><a href="/blog/tags/livereload/" style="font-size: 10.00px;">livereload</a><a href="/blog/tags/mobile/" style="font-size: 10.00px;">mobile</a><a href="/blog/tags/npm/" style="font-size: 10.00px;">npm</a><a href="/blog/tags/plugins/" style="font-size: 10.00px;">plugins</a><a href="/blog/tags/powerline/" style="font-size: 10.00px;">powerline</a><a href="/blog/tags/thailand/" style="font-size: 20.00px;">thailand</a><a href="/blog/tags/travel/" style="font-size: 20.00px;">travel</a><a href="/blog/tags/vim/" style="font-size: 10.00px;">vim</a><a href="/blog/tags/web-audio/" style="font-size: 10.00px;">web audio</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/08">August 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/06">June 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/05">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/04">April 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/06">June 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/05">May 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/03">March 2013</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/naturally-sorting-with-gulp/">Naturally Sorting a Filestream with Gulp</a>
+          </li>
+        
+          <li>
+            <a href="/blog/livereload-with-cordova-and-gulp/">Livereload with Cordova and Gulp</a>
+          </li>
+        
+          <li>
+            <a href="/blog/buffering-audio-in-parallel-on-mobile/">Buffering Audio in Parallel on Mobile with Web Audio API</a>
+          </li>
+        
+          <li>
+            <a href="/blog/homebrew-and-python-tale-of-installing/">Homebrew and Python - A tale of Installing Powerline</a>
+          </li>
+        
+          <li>
+            <a href="/blog/ergodox-build-log/">Ergodox Build Log</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Matt Green<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog//" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog//archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/blog/js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>
