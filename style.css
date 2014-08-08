@@ -1,243 +1,161 @@
 @-webkit-keyframes slidedown {
-  /* line 32, scss/style.css.scss */
   from {
-    height: 0px;
-  }
+    height: 0px; }
 
-  /* line 36, scss/style.css.scss */
   to {
-    height: 160px;
-  }
-}
+    height: 160px; } }
 
 @-moz-keyframes slidedown {
-  /* line 32, scss/style.css.scss */
   from {
-    height: 0px;
-  }
+    height: 0px; }
 
-  /* line 36, scss/style.css.scss */
   to {
-    height: 160px;
-  }
-}
+    height: 160px; } }
 
 @-ms-keyframes slidedown {
-  /* line 32, scss/style.css.scss */
   from {
-    height: 0px;
-  }
+    height: 0px; }
 
-  /* line 36, scss/style.css.scss */
   to {
-    height: 160px;
-  }
-}
+    height: 160px; } }
 
 @-o-keyframes slidedown {
-  /* line 32, scss/style.css.scss */
   from {
-    height: 0px;
-  }
+    height: 0px; }
 
-  /* line 36, scss/style.css.scss */
   to {
-    height: 160px;
-  }
-}
+    height: 160px; } }
 
 @keyframes slidedown {
-  /* line 32, scss/style.css.scss */
   from {
-    height: 0px;
-  }
+    height: 0px; }
 
-  /* line 36, scss/style.css.scss */
   to {
-    height: 160px;
-  }
-}
+    height: 160px; } }
 
 @-webkit-keyframes rotate {
-  /* line 42, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
     -ms-transform: rotateY(90deg);
     -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
+    transform: rotateY(90deg); }
 
-  /* line 46, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-}
+    transform: rotateY(0deg); } }
 
 @-moz-keyframes rotate {
-  /* line 42, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
     -ms-transform: rotateY(90deg);
     -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
+    transform: rotateY(90deg); }
 
-  /* line 46, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-}
+    transform: rotateY(0deg); } }
 
 @-ms-keyframes rotate {
-  /* line 42, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
     -ms-transform: rotateY(90deg);
     -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
+    transform: rotateY(90deg); }
 
-  /* line 46, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-}
+    transform: rotateY(0deg); } }
 
 @-o-keyframes rotate {
-  /* line 42, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
     -ms-transform: rotateY(90deg);
     -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
+    transform: rotateY(90deg); }
 
-  /* line 46, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-}
+    transform: rotateY(0deg); } }
 
 @keyframes rotate {
-  /* line 42, scss/style.css.scss */
   from {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
     -ms-transform: rotateY(90deg);
     -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
+    transform: rotateY(90deg); }
 
-  /* line 46, scss/style.css.scss */
   to {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-}
+    transform: rotateY(0deg); } }
 
 @-webkit-keyframes border {
-  /* line 53, scss/style.css.scss */
   from {
-    color: #4775FF;
-  }
+    color: #4775ff; }
 
-  /* line 57, scss/style.css.scss */
   to {
-    color: green;
-  }
-}
+    color: green; } }
 
 @-moz-keyframes border {
-  /* line 53, scss/style.css.scss */
   from {
-    color: #4775FF;
-  }
+    color: #4775ff; }
 
-  /* line 57, scss/style.css.scss */
   to {
-    color: green;
-  }
-}
+    color: green; } }
 
 @-ms-keyframes border {
-  /* line 53, scss/style.css.scss */
   from {
-    color: #4775FF;
-  }
+    color: #4775ff; }
 
-  /* line 57, scss/style.css.scss */
   to {
-    color: green;
-  }
-}
+    color: green; } }
 
 @-o-keyframes border {
-  /* line 53, scss/style.css.scss */
   from {
-    color: #4775FF;
-  }
+    color: #4775ff; }
 
-  /* line 57, scss/style.css.scss */
   to {
-    color: green;
-  }
-}
+    color: green; } }
 
 @keyframes border {
-  /* line 53, scss/style.css.scss */
   from {
-    color: #4775FF;
-  }
+    color: #4775ff; }
 
-  /* line 57, scss/style.css.scss */
   to {
-    color: green;
-  }
-}
+    color: green; } }
 
-/* line 63, scss/style.css.scss */
 body {
   background-color: black;
   text-align: center;
-  padding: 0 !important;
-}
+  padding: 0 !important; }
 
-/* line 69, scss/style.css.scss */
 .container {
   margin: 0 auto;
-  margin-top: 15%;
-}
+  margin-top: 15%; }
 
-/* line 74, scss/style.css.scss */
 #name {
   color: white;
-  font-weight: 400 !important;
-}
+  font-weight: 400 !important; }
 
-/* line 79, scss/style.css.scss */
 .contacts {
   display: block;
   list-style: none;
@@ -258,159 +176,143 @@ body {
   -moz-animation-timing-function: linear;
   -ms-animation-timing-function: linear;
   -o-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-/* line 86, scss/style.css.scss */
-.contacts div {
-  display: inline-block;
-}
-/* line 94, scss/style.css.scss */
-.contacts li {
-  height: 40px;
-  width: inherit;
-}
-/* line 99, scss/style.css.scss */
-.contacts li:nth-child(1) {
-  -webkit-animation-duration: 0.8s;
-  -moz-animation-duration: 0.8s;
-  -ms-animation-duration: 0.8s;
-  -o-animation-duration: 0.8s;
-  animation-duration: 0.8s;
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  -ms-animation-delay: 0s;
-  -o-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation-timing-function: ease-in;
-  -moz-animation-timing-function: ease-in;
-  -ms-animation-timing-function: ease-in;
-  -o-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-name: rotate;
-  -moz-animation-name: rotate;
-  -ms-animation-name: rotate;
-  -o-animation-name: rotate;
-  animation-name: rotate;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-transform: rotateY(90deg);
-  -moz-transform: rotateY(90deg);
-  -ms-transform: rotateY(90deg);
-  -o-transform: rotateY(90deg);
-  transform: rotateY(90deg);
-}
-/* line 103, scss/style.css.scss */
-.contacts li:nth-child(2) {
-  -webkit-animation-duration: 0.8s;
-  -moz-animation-duration: 0.8s;
-  -ms-animation-duration: 0.8s;
-  -o-animation-duration: 0.8s;
-  animation-duration: 0.8s;
-  -webkit-animation-delay: 0.4s;
-  -moz-animation-delay: 0.4s;
-  -ms-animation-delay: 0.4s;
-  -o-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-  -webkit-animation-timing-function: ease-in;
-  -moz-animation-timing-function: ease-in;
-  -ms-animation-timing-function: ease-in;
-  -o-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-name: rotate;
-  -moz-animation-name: rotate;
-  -ms-animation-name: rotate;
-  -o-animation-name: rotate;
-  animation-name: rotate;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-transform: rotateY(90deg);
-  -moz-transform: rotateY(90deg);
-  -ms-transform: rotateY(90deg);
-  -o-transform: rotateY(90deg);
-  transform: rotateY(90deg);
-}
-/* line 107, scss/style.css.scss */
-.contacts li:nth-child(3) {
-  -webkit-animation-duration: 0.8s;
-  -moz-animation-duration: 0.8s;
-  -ms-animation-duration: 0.8s;
-  -o-animation-duration: 0.8s;
-  animation-duration: 0.8s;
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  -ms-animation-delay: 0.8s;
-  -o-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-  -webkit-animation-timing-function: ease-in;
-  -moz-animation-timing-function: ease-in;
-  -ms-animation-timing-function: ease-in;
-  -o-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-name: rotate;
-  -moz-animation-name: rotate;
-  -ms-animation-name: rotate;
-  -o-animation-name: rotate;
-  animation-name: rotate;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-transform: rotateY(90deg);
-  -moz-transform: rotateY(90deg);
-  -ms-transform: rotateY(90deg);
-  -o-transform: rotateY(90deg);
-  transform: rotateY(90deg);
-}
-/* line 111, scss/style.css.scss */
-.contacts li:nth-child(4) {
-  -webkit-animation-duration: 0.8s;
-  -moz-animation-duration: 0.8s;
-  -ms-animation-duration: 0.8s;
-  -o-animation-duration: 0.8s;
-  animation-duration: 0.8s;
-  -webkit-animation-delay: 1.2s;
-  -moz-animation-delay: 1.2s;
-  -ms-animation-delay: 1.2s;
-  -o-animation-delay: 1.2s;
-  animation-delay: 1.2s;
-  -webkit-animation-timing-function: ease-in;
-  -moz-animation-timing-function: ease-in;
-  -ms-animation-timing-function: ease-in;
-  -o-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
-  -webkit-animation-name: rotate;
-  -moz-animation-name: rotate;
-  -ms-animation-name: rotate;
-  -o-animation-name: rotate;
-  animation-name: rotate;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-transform: rotateY(90deg);
-  -moz-transform: rotateY(90deg);
-  -ms-transform: rotateY(90deg);
-  -o-transform: rotateY(90deg);
-  transform: rotateY(90deg);
-}
+  animation-timing-function: linear; }
+  .contacts div {
+    display: inline-block; }
+  .contacts li {
+    height: 40px;
+    width: inherit; }
+  .contacts li:nth-child(1) {
+    -webkit-animation-duration: 0.8s;
+    -moz-animation-duration: 0.8s;
+    -ms-animation-duration: 0.8s;
+    -o-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-animation-name: rotate;
+    -moz-animation-name: rotate;
+    -ms-animation-name: rotate;
+    -o-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg); }
+  .contacts li:nth-child(2) {
+    -webkit-animation-duration: 0.8s;
+    -moz-animation-duration: 0.8s;
+    -ms-animation-duration: 0.8s;
+    -o-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-animation-name: rotate;
+    -moz-animation-name: rotate;
+    -ms-animation-name: rotate;
+    -o-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg); }
+  .contacts li:nth-child(3) {
+    -webkit-animation-duration: 0.8s;
+    -moz-animation-duration: 0.8s;
+    -ms-animation-duration: 0.8s;
+    -o-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    -ms-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-animation-name: rotate;
+    -moz-animation-name: rotate;
+    -ms-animation-name: rotate;
+    -o-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg); }
+  .contacts li:nth-child(4) {
+    -webkit-animation-duration: 0.8s;
+    -moz-animation-duration: 0.8s;
+    -ms-animation-duration: 0.8s;
+    -o-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    -ms-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -ms-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-animation-name: rotate;
+    -moz-animation-name: rotate;
+    -ms-animation-name: rotate;
+    -o-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg); }
 
-/* line 119, scss/style.css.scss */
 .blank {
   width: 46px;
   height: inherit;
   display: inline-block;
-  vertical-align: top;
-}
+  vertical-align: top; }
 
-/* line 126, scss/style.css.scss */
 .line {
   width: 0px;
   height: inherit;
@@ -418,57 +320,44 @@ body {
   vertical-align: top;
   border-left: 1px;
   border-left-style: solid;
-  border-left-color: white;
-}
+  border-left-color: white; }
 
-/* line 137, scss/style.css.scss */
 .icon {
   width: 46px;
   height: inherit;
   display: inline-block;
-  vertical-align: top;
-}
-/* line 144, scss/style.css.scss */
-.icon .fa {
-  font-size: 36px;
-}
-/* line 148, scss/style.css.scss */
-.icon .fa-envelope {
-  font-size: 30px;
-}
-/* line 152, scss/style.css.scss */
-.icon a:visited {
-  color: #4775FF;
-}
-/* line 156, scss/style.css.scss */
-.icon a:link {
-  color: #4775FF;
-}
-/* line 160, scss/style.css.scss */
-.icon a:hover {
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-direction: alternate;
-  -moz-animation-direction: alternate;
-  -ms-animation-direction: alternate;
-  -o-animation-direction: alternate;
-  animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -ms-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-name: border;
-  -moz-animation-name: border;
-  -ms-animation-name: border;
-  -o-animation-name: border;
-  animation-name: border;
-}
+  vertical-align: top; }
+  .icon .fa {
+    font-size: 36px; }
+  .icon .fa-envelope {
+    font-size: 30px; }
+  .icon a:visited {
+    color: #4775ff; }
+  .icon a:link {
+    color: #4775ff; }
+  .icon a:hover {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    -ms-animation-direction: alternate;
+    -o-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: border;
+    -moz-animation-name: border;
+    -ms-animation-name: border;
+    -o-animation-name: border;
+    animation-name: border; }
