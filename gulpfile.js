@@ -3,6 +3,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
+var autoprefixer = require('gulp-autoprefixer');
+
+var size = require('gulp-size');
 var debug = require('gulp-debug');
 
 
@@ -14,6 +17,13 @@ var paths = {
 
   output: 'public/'
 };
+
+var pureCssFiles = [
+  'base.css',
+  'grids-responsive.css',
+  'menus.css'
+];
+
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -27,6 +37,8 @@ gulp.task('css', function() {
   gulp.src(paths.scss)
     .pipe(sass())
     .pipe(gulp.dest(paths.output+'styles/'))
+    .pipe(autoprefixer())
+    .pipe(size({title: 'main.css'}))
     .pipe(browserSync.reload({stream:true}));
 });
 
