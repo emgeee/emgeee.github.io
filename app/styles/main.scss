@@ -1,43 +1,84 @@
 
 @import '../../node_modules/colors.css/sass/colors';
+@import 'highlight';
 
-// Core variables and mixins
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+$sidebar-width: 33%;
 
-// Reset and dependencies
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
-// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
-// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
-
-// Core CSS
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
-// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
-// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
-// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
-// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
-// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+$spacing-top: 15px;
 
 body {
+  margin: 0px;
+
+  background-color: $white;
+}
+h1 {
+  font-family:sans-serif;
+  margin: 0;
 }
 
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $blue;
 }
+
+.sidebar-container {
+  width:$sidebar-width;
+  position:fixed;
+  top:0;
+  bottom:0;
+
+  padding-top: $spacing-top;
+
+  background: $green;
+  font-family:sans-serif;
+}
+
 
 .sidebar {
-  background: $green;
-  // text-align: right;
+  margin-top:20%;
+  margin-right:10%;
+
+  text-align: right;
 }
 
+
+#name {
+  color: $white;
+}
+
+.nav {
+  list-style: none;
+
+  a:link,
+  a:visited {
+    color:$lime;
+  }
+}
 
 
 .content {
-  background: $red;
+  margin-left: $sidebar-width;
+  height:100%;
+
+  padding-top: $spacing-top;
+  padding-left:3%;
+  padding-right:3%;
+
+  text-align: left;
 }
+
+.posts-list {
+  min-height:100%;
+}
+
+.post {
+  &>h1 {
+    font-size: 1.2em;
+  }
+  &>h2 {
+    font-size: 1.0em;
+  }
+}
+
+

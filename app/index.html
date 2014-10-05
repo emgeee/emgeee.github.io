@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+
     <link rel="stylesheet" href="styles/main.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -16,25 +17,30 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3 sidebar">
-          <div class="vertical-center">
-            <h1>Matt Green</h1>
+    <div class="sidebar-container">
+      <div class="sidebar">
+        <h1 id="name">Matt Green</h1>
 
-            <ul>
-              <li><a a ui-sref="about">About</a></li>
-              <li><a a ui-sref="projects">Projects</a></li>
-              <li><a a ui-sref="blog">Blog</a></li>
-            </ul>
+        <nav>
+          <ul class="nav">
+            <li><a a ui-sref="home">About</a></li>
+            <li><a a ui-sref="projects">Projects</a></li>
+            <li><a a ui-sref="blog">Blog</a></li>
+          </ul>
+        </nav>
 
-            <p> © Matt Green </p>
-          </div>
-        </div>
-        <div class="col-md-9 content">
-          <div ui-view></div>
-        </div>
+        <p class="about">
+        engineer // hacker // entrepreneur<br>
+        co-founder of <a href="https://thinkster.io">Thinkster.io</a>
+        </p>
+
+        <p class="social-icons">
+        </p>
+
       </div>
+    </div>
+    <div class="content">
+      <div ui-view></div>
     </div>
 
 
